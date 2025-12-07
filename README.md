@@ -21,7 +21,7 @@ A interactive web-based guide for tracking your progress through Path of Exile 2
 
 ## Live Demo
 
-Visit the live site: [Your GitHub Pages URL]
+👉 https://nicolasbagatello.github.io/poe2-helper/
 
 ## Data Coverage
 
