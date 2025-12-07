@@ -13,6 +13,8 @@ let filterActive = false;
 let searchQuery = '';
 let rewardFilter = 'all';
 let activeActNumber = 1;
+let showOptional = true;
+let walkthroughMode = false;
 
 // ===================================
 // Constants
@@ -20,6 +22,7 @@ let activeActNumber = 1;
 const STORAGE_KEY = 'poe2-zone-progress';
 const NOTES_STORAGE_KEY = 'poe2-zone-notes';
 const FONT_SIZE_KEY = 'poe2-font-size';
+const PREFERENCES_KEY = 'poe2-user-preferences';
 const DATA_PATH = 'data/zones.json';
 const IMAGES_PATH = 'images/';
 
@@ -32,6 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function initApp() {
     try {
+        // Load user preferences first
+        loadUserPreferences();
+
         // Load completion state from localStorage
         loadCompletionState();
 
@@ -53,10 +59,60 @@ async function initApp() {
         // Initialize event listeners
         initEventListeners();
 
+        // Apply saved preferences to UI
+        applyPreferencesToUI();
+
     } catch (error) {
         console.error('Error initializing app:', error);
         showError('Failed to load zone data. Please refresh the page.');
     }
+}
+
+function applyPreferencesToUI() {
+    // Update optional button UI
+    const optionalBtn = document.getElementById('optionalBtn');
+    if (optionalBtn) {
+        if (showOptional) {
+            optionalBtn.classList.remove('active');
+            optionalBtn.innerHTML = '<span class="btn-icon">👁</span> Hide Optional';
+        } else {
+            optionalBtn.classList.add('active');
+            optionalBtn.innerHTML = '<span class="btn-icon">👁</span> Show Optional';
+        }
+    }
+
+    // Update walkthrough button UI
+    const walkthroughBtn = document.getElementById('walkthroughBtn');
+    if (walkthroughBtn) {
+        if (walkthroughMode) {
+            walkthroughBtn.classList.add('active');
+            walkthroughBtn.innerHTML = '<span class="btn-icon">📋</span> Hide Walkthrough';
+        } else {
+            walkthroughBtn.classList.remove('active');
+            walkthroughBtn.innerHTML = '<span class="btn-icon">📋</span> Show Walkthrough';
+        }
+    }
+
+    // Update filter button UI
+    const filterBtn = document.getElementById('filterBtn');
+    if (filterBtn) {
+        if (filterActive) {
+            filterBtn.classList.add('active');
+            filterBtn.innerHTML = '<span class="btn-icon">&#9776;</span> Show All Zones';
+        } else {
+            filterBtn.classList.remove('active');
+            filterBtn.innerHTML = '<span class="btn-icon">&#9776;</span> Show Only Undone';
+        }
+    }
+
+    // Update reward filter dropdown
+    const rewardFilterSelect = document.getElementById('rewardFilter');
+    if (rewardFilterSelect) {
+        rewardFilterSelect.value = rewardFilter;
+    }
+
+    // Apply filters based on loaded preferences
+    applyFilters();
 }
 
 // ===================================
@@ -100,6 +156,54 @@ function saveCompletionState() {
 }
 
 // ===================================
+// User Preferences Functions
+// ===================================
+function loadUserPreferences() {
+    try {
+        const saved = localStorage.getItem(PREFERENCES_KEY);
+        if (saved) {
+            const prefs = JSON.parse(saved);
+            // Apply preferences with defaults
+            showOptional = prefs.showOptional !== undefined ? prefs.showOptional : true;
+            walkthroughMode = prefs.walkthroughMode !== undefined ? prefs.walkthroughMode : true;
+            filterActive = prefs.filterActive !== undefined ? prefs.filterActive : false;
+            rewardFilter = prefs.rewardFilter || 'all';
+            activeActNumber = prefs.activeActNumber || 1;
+        } else {
+            // Default preferences for first time users
+            showOptional = true;
+            walkthroughMode = true;
+            filterActive = false;
+            rewardFilter = 'all';
+            activeActNumber = 1;
+        }
+    } catch (error) {
+        console.error('Error loading preferences:', error);
+        // Use defaults on error
+        showOptional = true;
+        walkthroughMode = true;
+        filterActive = false;
+        rewardFilter = 'all';
+        activeActNumber = 1;
+    }
+}
+
+function saveUserPreferences() {
+    try {
+        const prefs = {
+            showOptional,
+            walkthroughMode,
+            filterActive,
+            rewardFilter,
+            activeActNumber
+        };
+        localStorage.setItem(PREFERENCES_KEY, JSON.stringify(prefs));
+    } catch (error) {
+        console.error('Error saving preferences:', error);
+    }
+}
+
+// ===================================
 // Zone Notes Functions
 // ===================================
 function loadZoneNote(zoneId) {
@@ -136,15 +240,12 @@ function saveZoneNote(zoneId, noteText) {
 // Font Size Controls
 // ===================================
 function loadFontSize() {
-    console.log('loadFontSize() called'); // Debug
     try {
         const savedSize = localStorage.getItem(FONT_SIZE_KEY);
-        console.log('Saved font size from localStorage:', savedSize); // Debug
         if (savedSize) {
             applyFontSize(savedSize);
         } else {
             // Default to normal if no saved preference
-            console.log('No saved font size, applying normal'); // Debug
             applyFontSize('normal');
         }
     } catch (error) {
@@ -170,8 +271,6 @@ function applyFontSize(size) {
     // Add the new size class
     htmlElement.classList.add(`font-size-${size}`);
 
-    console.log(`Font size applied: ${size}`); // Debug log
-
     // Update the label to show current size
     updateFontSizeLabel(size);
 }
@@ -184,7 +283,6 @@ function updateFontSizeLabel(size) {
 }
 
 function increaseFontSize() {
-    console.log('increaseFontSize() clicked'); // Debug
     const htmlElement = document.documentElement;
     let currentSize = 'normal';
 
@@ -198,8 +296,6 @@ function increaseFontSize() {
     } else if (htmlElement.classList.contains('font-size-xlarge')) {
         currentSize = 'xlarge';
     }
-
-    console.log('Current font size:', currentSize); // Debug
 
     let newSize;
     if (currentSize === 'small') {
@@ -209,17 +305,14 @@ function increaseFontSize() {
     } else if (currentSize === 'large') {
         newSize = 'xlarge';
     } else {
-        console.log('Already at maximum font size');
         return; // Already at maximum
     }
 
-    console.log('New font size:', newSize); // Debug
     applyFontSize(newSize);
     saveFontSize(newSize);
 }
 
 function decreaseFontSize() {
-    console.log('decreaseFontSize() clicked'); // Debug
     const htmlElement = document.documentElement;
     let currentSize = 'normal';
 
@@ -234,8 +327,6 @@ function decreaseFontSize() {
         currentSize = 'xlarge';
     }
 
-    console.log('Current font size:', currentSize); // Debug
-
     let newSize;
     if (currentSize === 'xlarge') {
         newSize = 'large';
@@ -244,11 +335,9 @@ function decreaseFontSize() {
     } else if (currentSize === 'normal') {
         newSize = 'small';
     } else {
-        console.log('Already at minimum font size');
         return; // Already at minimum
     }
 
-    console.log('New font size:', newSize); // Debug
     applyFontSize(newSize);
     saveFontSize(newSize);
 }
@@ -659,8 +748,17 @@ function createZoneCard(zone, actNumber) {
     // Quests
     const questsSection = createQuestsSection(zone.quests);
 
-    // Notes section
-    const notesSection = createNotesSection(actNumber, zone.zone_name);
+    // Zone notes from JSON (if exists)
+    const zoneNotesSection = createZoneNotesFromJSON(zone.notes);
+
+    // Walkthrough steps (if walkthrough mode enabled)
+    const walkthroughSection = createWalkthroughSection(zone.walkthrough_steps, actNumber, zone.zone_name);
+
+    // Town visits
+    const townVisitsSection = createTownVisitsSection(zone.town_visits);
+
+    // Personal notes section
+    const personalNotesSection = createNotesSection(actNumber, zone.zone_name);
 
     // Append all sections
     card.appendChild(header);
@@ -669,7 +767,10 @@ function createZoneCard(zone, actNumber) {
     if (rewardsSection) card.appendChild(rewardsSection);
     if (poiSection) card.appendChild(poiSection);
     if (questsSection) card.appendChild(questsSection);
-    if (notesSection) card.appendChild(notesSection);
+    if (zoneNotesSection) card.appendChild(zoneNotesSection);
+    if (walkthroughSection) card.appendChild(walkthroughSection);
+    if (townVisitsSection) card.appendChild(townVisitsSection);
+    if (personalNotesSection) card.appendChild(personalNotesSection);
 
     return card;
 }
@@ -821,17 +922,50 @@ function createPOISection(pointsOfInterest) {
     list.className = 'poi-list';
 
     pointsOfInterest.forEach(poi => {
+        // Skip optional POIs if showOptional is false
+        if (!showOptional && poi.optional) {
+            return;
+        }
+
         const item = document.createElement('li');
         item.className = 'poi-item';
 
+        // Add optional class for styling
+        if (poi.optional) {
+            item.classList.add('poi-optional');
+        }
+
         const name = document.createElement('div');
         name.className = 'poi-name';
-        name.textContent = poi.name;
+
+        // Add optional badge
+        if (poi.optional) {
+            const optionalBadge = document.createElement('span');
+            optionalBadge.className = 'poi-optional-badge';
+            optionalBadge.textContent = 'Optional';
+            name.appendChild(optionalBadge);
+        }
+
+        const nameText = document.createTextNode(poi.name);
+        name.appendChild(nameText);
 
         item.appendChild(name);
 
+        // Add location hint if available
+        if (poi.location_hint) {
+            const locationHint = document.createElement('div');
+            locationHint.className = 'poi-location-hint';
+            locationHint.textContent = `📍 ${poi.location_hint}`;
+            item.appendChild(locationHint);
+        }
+
         list.appendChild(item);
     });
+
+    // Don't show section if all POIs were filtered out
+    if (list.children.length === 0) {
+        return null;
+    }
 
     section.appendChild(title);
     section.appendChild(list);
@@ -868,6 +1002,125 @@ function createQuestsSection(quests) {
 
         section.appendChild(questItem);
     });
+
+    return section;
+}
+
+function createZoneNotesFromJSON(notes) {
+    if (!notes) return null;
+
+    const section = document.createElement('div');
+    section.className = 'zone-section zone-tips';
+
+    const title = document.createElement('h4');
+    title.className = 'zone-section-title';
+    title.textContent = '💡 Tips & Notes';
+
+    const notesText = document.createElement('div');
+    notesText.className = 'zone-tips-text';
+    notesText.textContent = notes;
+
+    section.appendChild(title);
+    section.appendChild(notesText);
+
+    return section;
+}
+
+function createWalkthroughSection(walkthroughSteps, actNumber, zoneName) {
+    if (!walkthroughSteps || walkthroughSteps.length === 0 || !walkthroughMode) return null;
+
+    const section = document.createElement('div');
+    section.className = 'zone-section zone-walkthrough';
+
+    const title = document.createElement('h4');
+    title.className = 'zone-section-title';
+    title.textContent = '📋 Walkthrough Steps';
+
+    const stepsList = document.createElement('div');
+    stepsList.className = 'walkthrough-steps-list';
+
+    walkthroughSteps.forEach((step, index) => {
+        const stepItem = document.createElement('div');
+        stepItem.className = 'walkthrough-step';
+        if (step.optional) {
+            stepItem.classList.add('optional');
+        }
+
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.id = `walkthrough-${getZoneId(actNumber, zoneName)}-step-${index}`;
+        checkbox.className = 'walkthrough-checkbox';
+
+        const label = document.createElement('label');
+        label.htmlFor = checkbox.id;
+        label.className = 'walkthrough-label';
+
+        const orderBadge = document.createElement('span');
+        orderBadge.className = 'walkthrough-order';
+        orderBadge.textContent = step.order === 'opt' ? 'OPT' : `#${step.order}`;
+        if (step.order === 'opt') {
+            orderBadge.classList.add('optional-badge');
+        }
+
+        const actionText = document.createElement('span');
+        actionText.className = 'walkthrough-action';
+        actionText.textContent = step.action;
+
+        label.appendChild(orderBadge);
+        label.appendChild(actionText);
+
+        stepItem.appendChild(checkbox);
+        stepItem.appendChild(label);
+
+        if (step.tip) {
+            const tip = document.createElement('div');
+            tip.className = 'walkthrough-tip';
+            tip.textContent = `💡 ${step.tip}`;
+            stepItem.appendChild(tip);
+        }
+
+        stepsList.appendChild(stepItem);
+    });
+
+    section.appendChild(title);
+    section.appendChild(stepsList);
+
+    return section;
+}
+
+function createTownVisitsSection(townVisits) {
+    if (!townVisits || townVisits.length === 0) return null;
+
+    const section = document.createElement('div');
+    section.className = 'zone-section zone-town-visits';
+
+    const title = document.createElement('h4');
+    title.className = 'zone-section-title';
+    title.textContent = '🏛️ Town Visits';
+
+    const visitsList = document.createElement('div');
+    visitsList.className = 'town-visits-list';
+
+    townVisits.forEach((visit, index) => {
+        const visitItem = document.createElement('div');
+        visitItem.className = 'town-visit-item';
+
+        const orderBadge = document.createElement('span');
+        orderBadge.className = 'town-visit-order';
+        orderBadge.textContent = `#${visit.order}`;
+
+        const instructions = document.createElement('span');
+        instructions.className = 'town-visit-instructions';
+        instructions.textContent = visit.instructions;
+
+        visitItem.appendChild(orderBadge);
+        visitItem.appendChild(instructions);
+
+        visitsList.appendChild(visitItem);
+    });
+
+    section.appendChild(title);
+    section.appendChild(visitsList);
 
     return section;
 }
@@ -1185,6 +1438,9 @@ function toggleFilter() {
         }
     }
 
+    // Save preference
+    saveUserPreferences();
+
     applyFilters();
 }
 
@@ -1274,6 +1530,56 @@ function applyFilter() {
 }
 
 // ===================================
+// Optional Content Toggle
+// ===================================
+function toggleOptionalContent() {
+    showOptional = !showOptional;
+    const optionalBtn = document.getElementById('optionalBtn');
+
+    if (optionalBtn) {
+        if (showOptional) {
+            optionalBtn.classList.remove('active');
+            optionalBtn.innerHTML = '<span class="btn-icon">👁</span> Hide Optional';
+        } else {
+            optionalBtn.classList.add('active');
+            optionalBtn.innerHTML = '<span class="btn-icon">👁</span> Show Optional';
+        }
+    }
+
+    // Save preference
+    saveUserPreferences();
+
+    // Re-render to update POI visibility
+    renderActs();
+    applyFilters();
+}
+
+// ===================================
+// Walkthrough Mode Toggle
+// ===================================
+function toggleWalkthroughMode() {
+    walkthroughMode = !walkthroughMode;
+    const walkthroughBtn = document.getElementById('walkthroughBtn');
+
+    if (walkthroughBtn) {
+        if (walkthroughMode) {
+            walkthroughBtn.classList.add('active');
+            walkthroughBtn.innerHTML = '<span class="btn-icon">📋</span> Hide Walkthrough';
+        } else {
+            walkthroughBtn.classList.remove('active');
+            walkthroughBtn.innerHTML = '<span class="btn-icon">📋</span> Show Walkthrough';
+        }
+    }
+
+    // Save preference
+    saveUserPreferences();
+
+    // Re-render to show/hide walkthrough steps
+    renderActs();
+    applyFilters();
+}
+
+// ===================================
 // Act Tab Functions
 // ===================================
 function switchToAct(actNumber) {
@@ -1291,6 +1597,9 @@ function switchToAct(actNumber) {
             tab.setAttribute('aria-selected', 'false');
         }
     });
+
+    // Save preference
+    saveUserPreferences();
 
     // Show/hide acts
     showActiveAct();
@@ -1333,11 +1642,24 @@ function initEventListeners() {
         filterBtn.addEventListener('click', toggleFilter);
     }
 
+    // Optional content toggle button
+    const optionalBtn = document.getElementById('optionalBtn');
+    if (optionalBtn) {
+        optionalBtn.addEventListener('click', toggleOptionalContent);
+    }
+
+    // Walkthrough mode toggle button
+    const walkthroughBtn = document.getElementById('walkthroughBtn');
+    if (walkthroughBtn) {
+        walkthroughBtn.addEventListener('click', toggleWalkthroughMode);
+    }
+
     // Reward filter dropdown
     const rewardFilterSelect = document.getElementById('rewardFilter');
     if (rewardFilterSelect) {
         rewardFilterSelect.addEventListener('change', (e) => {
             rewardFilter = e.target.value;
+            saveUserPreferences();
             applyFilters();
         });
     }

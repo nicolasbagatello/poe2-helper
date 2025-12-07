@@ -375,18 +375,63 @@
             "layout_image_name": ["Hunting-Grounds-Pilot.webp", "Hunting-Grounds-Boss.webp"],
             "layout_confidence": "High",
             "suggested_route": "Follow the edges and avoid the middle. Points of Interest are located in or close to the corners.",
+            "notes": "Kill Crowbell first (required for Book of Specialisation). Find exits to Ogham Farmlands and Freythorn, take their waypoints, then backtrack.",
             "points_of_interest": [
               {
                 "name": "Boss: The Crowbell",
-                "reward": "Book of Specialisation (+2 Weapon Set Skill Points)"
+                "reward": "Book of Specialisation (+2 Weapon Set Skill Points)",
+                "optional": false,
+                "location_hint": "Found in or close to corners - follow edges"
               },
               {
                 "name": "Ritual Encounter (Large Ritual Altar)",
-                "reward": "Uncut Skill Gem (Level 4)"
+                "reward": "Uncut Skill Gem (Level 4)",
+                "optional": true,
+                "location_hint": "Large ritual altar in corners"
               },
               {
                 "name": "Dryadic Ritual (Tree Creatures)",
-                "reward": "Uncut Support Gem (Level 1)"
+                "reward": "Uncut Support Gem (Level 1)",
+                "optional": true,
+                "location_hint": "Dryad encounter in corners"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find and kill Crowbell",
+                "optional": false,
+                "tip": "2 skill points reward - follow edges, POIs in corners"
+              },
+              {
+                "order": 2,
+                "action": "Find exit to Ogham Farmlands",
+                "optional": false,
+                "tip": "Enter zone, take waypoint, backtrack to Hunting Grounds"
+              },
+              {
+                "order": 2,
+                "action": "Find exit to Freythorn",
+                "optional": false,
+                "tip": "Enter zone, take waypoint, backtrack to Hunting Grounds"
+              },
+              {
+                "order": 3,
+                "action": "Go to Freythorn",
+                "optional": false,
+                "tip": "Via townportal+waypoint if it isn't the last you found"
+              },
+              {
+                "order": "opt",
+                "action": "Find and complete the Ritual site",
+                "optional": true,
+                "tip": "Level 4 uncut skill gem"
+              },
+              {
+                "order": "opt",
+                "action": "Find and finish the Dryad Encounter",
+                "optional": true,
+                "tip": "Uncut support gem"
               }
             ],
             "quests": []
@@ -396,10 +441,27 @@
             "layout_image_name": "Freythorn-Pilot.webp",
             "layout_confidence": "Low",
             "suggested_route": "Make a loop to find all three Ritual encounters. If you find the boss arena early, watch for 'black magic swirls' which point to any incomplete Rituals.",
+            "notes": "Do all 4 rituals, kill King in the Mists at the 4th ritual. Then go to Ogham Farmlands.",
             "points_of_interest": [
               {
                 "name": "Boss: The King in the Mists (after 4 rituals)",
-                "reward": "Permanent Buff: +30 to Maximum Spirit, Uncut Spirit Gem (Level 4)"
+                "reward": "Permanent Buff: +30 to Maximum Spirit, Uncut Spirit Gem (Level 4)",
+                "optional": false,
+                "location_hint": "Complete all 4 rituals to spawn boss - watch for black magic swirls pointing to incomplete rituals"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Do all 4 rituals, kill King in the Mists at the 4th",
+                "optional": false,
+                "tip": "+30 spirit (normal difficulty only) - make a loop to find all rituals"
+              },
+              {
+                "order": 2,
+                "action": "Go to Ogham Farmlands",
+                "optional": false,
+                "tip": "Via townportal+waypoint"
               }
             ],
             "quests": []
@@ -409,14 +471,39 @@
             "layout_image_name": "Ogham-Farmlands-Pilot.webp",
             "layout_confidence": "Very High",
             "suggested_route": "Exit is always on the opposite wall of the entrance. Find Una's Hut behind a hut/cart combo.",
+            "notes": "Find Una's lute (somewhat in center) for 2 skill points. Then find exit to Ogham Village.",
             "points_of_interest": [
               {
                 "name": "Una's Lute (inside Una's Lute Box)",
-                "reward": "Book of Specialisation (+2 Weapon Set Skill Points)"
+                "reward": "Book of Specialisation (+2 Weapon Set Skill Points)",
+                "optional": false,
+                "location_hint": "Somewhat in center of zone - behind a hut/cart combo"
               },
               {
                 "name": "Crop Circle (Ambush)",
-                "reward": "Uncut Skill Gem (Level 4)"
+                "reward": "Uncut Skill Gem (Level 4)",
+                "optional": true,
+                "location_hint": "Kill the rare dog in the crop circle"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find Una's lute",
+                "optional": false,
+                "tip": "Somewhat in center of zone - 2 skill points reward"
+              },
+              {
+                "order": 2,
+                "action": "Find exit to Ogham Village",
+                "optional": false,
+                "tip": "Exit always on opposite wall of entrance"
+              },
+              {
+                "order": "opt",
+                "action": "Find the Crop Circle and kill the rare dog",
+                "optional": true,
+                "tip": "Level 4 uncut skill gem"
               }
             ],
             "quests": []
@@ -426,14 +513,46 @@
             "layout_image_name": "Ogham-Village-Pilot.webp",
             "layout_confidence": "Very High",
             "suggested_route": "Hug the right-hand wall from the entrance and head up (North) toward the boss arena.",
+            "notes": "Find Smithing tools (only needed on first character per league). Kill Executioner, then go to Manor Ramparts.",
             "points_of_interest": [
               {
                 "name": "Boss: The Executioner",
-                "reward": "Uncut Support Gem (Level 1), Uncut Skill Gem (Level 5) (Quest Reward: Save Leitis)"
+                "reward": "Uncut Support Gem (Level 1), Uncut Skill Gem (Level 5) (Quest Reward: Save Leitis)",
+                "optional": false,
+                "location_hint": "Hug right-hand wall from entrance, head north to boss arena"
               },
               {
                 "name": "Renly's Workshop (Smithing Tools)",
-                "reward": "Unlocks Salvage Bench, Artificer's Orb, Blank Lesser Rune"
+                "reward": "Unlocks Salvage Bench, Artificer's Orb, Blank Lesser Rune",
+                "optional": false,
+                "location_hint": "First character per league only - unlocks salvaging bench"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find Smithing tools",
+                "optional": false,
+                "tip": "Only needed on first character per league - unlocks salvaging bench"
+              },
+              {
+                "order": 2,
+                "action": "Find and kill the Executioner",
+                "optional": false,
+                "tip": "Save Leitis quest - hug right wall, head north"
+              },
+              {
+                "order": 3,
+                "action": "Go to Manor Ramparts",
+                "optional": false,
+                "tip": "Continue to next zone"
+              }
+            ],
+            "town_visits": [
+              {
+                "after_zone": "Ogham Village",
+                "instructions": "Talk to Renly to turn in the smithing tools (first character per league only)",
+                "order": 1
               }
             ],
             "quests": []
@@ -443,10 +562,27 @@
             "layout_image_name": "Manor-Ramparts-Pilot.webp",
             "layout_confidence": "Very High",
             "suggested_route": "Follow the U-shaped pattern.",
+            "notes": "Find exit to Ogham Manor. Always go opposite direction of waypoint after entering zone. The Gallows is the location from character creation screen.",
             "points_of_interest": [
               {
                 "name": "The Gallows (Hanged Man)",
-                "reward": "Uncut Support Gem (Level 1)"
+                "reward": "Uncut Support Gem (Level 1)",
+                "optional": true,
+                "location_hint": "The location from the character creation screen"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find exit to Ogham Manor",
+                "optional": false,
+                "tip": "Follow U-shaped pattern - always go opposite direction of waypoint after entering zone"
+              },
+              {
+                "order": "opt",
+                "action": "Find the Gallows",
+                "optional": true,
+                "tip": "The location from character creation screen - uncut support gem"
               }
             ],
             "quests": []
@@ -456,10 +592,27 @@
             "layout_image_name": "Ogham-Manor-First.webp",
             "layout_confidence": "High",
             "suggested_route": "Head Northeast, cross the bridge, proceed North to the boss, then Southeast for the Level 2 entrance.",
+            "notes": "Find and kill Candlemass. If you find stairs first, go down, take checkpoint, then go back up. You can checkpoint from Candlemass to stairs once you found and killed it.",
             "points_of_interest": [
               {
                 "name": "Boss: Candlemass, the Living Rite",
-                "reward": "Permanent Buff: +20 to Maximum Life"
+                "reward": "Permanent Buff: +20 to Maximum Life",
+                "optional": false,
+                "location_hint": "Head Northeast, cross bridge, proceed North"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find and kill Candlemass",
+                "optional": false,
+                "tip": "If you find stairs first, go down, take checkpoint, then go back up"
+              },
+              {
+                "order": 2,
+                "action": "Find and go down stairs twice",
+                "optional": false,
+                "tip": "You can checkpoint from Candlemass to stairs once killed"
               }
             ],
             "quests": []
@@ -469,7 +622,16 @@
             "layout_image_name": "Ogham-Manor-Second.webp",
             "layout_confidence": "High Medium",
             "suggested_route": "Head in the opposite direction of the entrance, cross the bridge, and continue toward the third floor entrance (Northeast if starting from Southwest).",
+            "notes": "Pass through to third floor. No bosses or POIs on this floor.",
             "points_of_interest": [],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Head to third floor entrance",
+                "optional": false,
+                "tip": "Opposite direction of entrance, cross bridge, head Northeast if starting Southwest"
+              }
+            ],
             "quests": []
           },
           {
@@ -477,10 +639,28 @@
             "layout_image_name": "Ogham-Manor-Third.webp",
             "layout_confidence": "High",
             "suggested_route": "Head in the opposite direction from the entrance to find the bridge leading to the boss elevator.",
+            "notes": "Final boss of Act 1. Find elevator to boss, kill boss, then go back to town.",
             "points_of_interest": [
               {
                 "name": "Final Boss: Count of Ogham",
-                "reward": "Completes Act 1"
+                "reward": "Completes Act 1",
+                "optional": false,
+                "location_hint": "Head opposite direction from entrance to find bridge leading to boss elevator"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find elevator to boss, kill boss, go back to town",
+                "optional": false,
+                "tip": "Completes Act 1 - head opposite direction from entrance"
+              }
+            ],
+            "town_visits": [
+              {
+                "after_zone": "Ogham Manor: Third Floor",
+                "instructions": "Talk to the Hooded One to go to Act 2",
+                "order": 1
               }
             ],
             "quests": []
@@ -496,10 +676,34 @@
             "layout_image_name": "A2-01-Vastiri-Outskirts-No-Text.png",
             "layout_confidence": "Medium",
             "suggested_route": "Follow the inside wall corresponding to the direction the town area 'leans' (Z-shape pattern) until you find a narrow canyon leading to the boss.",
+            "notes": "Find and kill Rathbreaker, then portal back to camp and enter caravan. Speak to everyone and use desert map to go to Mawdun Quarry.",
             "points_of_interest": [
               {
                 "name": "Boss: Rathbreaker",
-                "reward": "Uncut Skill Gem (Level 6) (Quest Reward), Progresses Earning Passage quest"
+                "reward": "Uncut Skill Gem (Level 6) (Quest Reward), Progresses Earning Passage quest",
+                "optional": false,
+                "location_hint": "Follow inside wall (Z-shape pattern) to narrow canyon leading to boss"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find and kill Rathbreaker",
+                "optional": false,
+                "tip": "Follow Z-shape pattern along inside wall to find narrow canyon"
+              },
+              {
+                "order": 2,
+                "action": "Portal back to camp, enter caravan",
+                "optional": false,
+                "tip": "Can also go ESC - respawn at checkpoint"
+              }
+            ],
+            "town_visits": [
+              {
+                "after_zone": "Vastiri Outskirts",
+                "instructions": "Speak to everyone, use desert map to go to Mawdun Quarry",
+                "order": 1
               }
             ],
             "quests": []
@@ -509,10 +713,21 @@
             "layout_image_name": "A2-02-Mawdun-Quarry.webp",
             "layout_confidence": "Fairly High",
             "suggested_route": "Follow an S-shape or Z-shape pattern, hugging a wall and following the bridges to the Mawdun Mine entrance.",
+            "notes": "Find exit to Mawdun Mine. Follow the checkpoints across bridges.",
             "points_of_interest": [
               {
                 "name": "Faridun War Cache",
-                "reward": "Artificer's Orb"
+                "reward": "Artificer's Orb",
+                "optional": true,
+                "location_hint": "Optional treasure cache in the quarry"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find exit to Mawdun Mine",
+                "optional": false,
+                "tip": "Follow S-shape or Z-shape pattern, hug wall and follow bridges"
               }
             ],
             "quests": []
@@ -522,14 +737,50 @@
             "layout_image_name": "A2-03-Mawdun-Mine.webp",
             "layout_confidence": "Very High",
             "suggested_route": "The layout is static (diamond shape); spawn at the bottom, move continuously North to find the boss at the top corner.",
+            "notes": "Static diamond-shaped layout. Kill Rudja, talk to Risu, portal back to town.",
             "points_of_interest": [
               {
                 "name": "Boss: Rudja, the Dread Engineer",
-                "reward": "Uncut Skill Gem, main storyline progression"
+                "reward": "Uncut Skill Gem, main storyline progression",
+                "optional": false,
+                "location_hint": "Spawn at bottom, move continuously North - boss at top corner"
               },
               {
                 "name": "Munitions Bunker",
-                "reward": "Uncut Skill Gem (Level 6)"
+                "reward": "Uncut Skill Gem (Level 6)",
+                "optional": true,
+                "location_hint": "Optional area within the mine"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find and kill Rudja",
+                "optional": false,
+                "tip": "Diamond-shaped layout - move North from spawn to find boss at top"
+              },
+              {
+                "order": 2,
+                "action": "Talk to Risu, portal back to town",
+                "optional": false,
+                "tip": "Main storyline progression"
+              }
+            ],
+            "town_visits": [
+              {
+                "after_zone": "Mawdun Mine",
+                "instructions": "Talk to Risu, then use desert map to go to Halani Gates",
+                "order": 1
+              },
+              {
+                "after_zone": "Mawdun Mine",
+                "instructions": "Talk to Asala at the gates, go back to caravan, talk to Risu again, then to Asala again",
+                "order": 2
+              },
+              {
+                "after_zone": "Mawdun Mine",
+                "instructions": "Use desert map to go to Traitor's Passage",
+                "order": 3
               }
             ],
             "quests": []
@@ -539,14 +790,39 @@
             "layout_image_name": ["A2-04-Traitors-Passage.png", "A2-04-Traitors-Passage-ESS.png"],
             "layout_confidence": "Fairly Low",
             "suggested_route": "Find the Decree of Imprisonment. Follow the yellow paper seals on the walls to locate Balbala. The opposite direction leads to The Halani Gates.",
+            "notes": "Follow yellow paper seals on walls to find Balbala. Stairs up leads to Halani Gates. Bell Chest is in a dead end with checkpoint.",
             "points_of_interest": [
               {
                 "name": "Boss: Balbala, the Traitor",
-                "reward": "Djinn Barya (access to Trial of the Sekhema for Ascendancy)"
+                "reward": "Djinn Barya (access to Trial of the Sekhema for Ascendancy)",
+                "optional": false,
+                "location_hint": "Follow yellow paper seals on walls - if you find paper, you are close"
               },
               {
                 "name": "Bell Chest",
-                "reward": "Uncut Skill Gem (Level 6)"
+                "reward": "Uncut Skill Gem (Level 6)",
+                "optional": true,
+                "location_hint": "In a dead end with checkpoint, some monsters and dropped gold on ground"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find and kill Balbala, pick up the Djinn Barya quest item",
+                "optional": false,
+                "tip": "Follow yellow paper seals - unlocks Trial of the Sekhema for Ascendancy"
+              },
+              {
+                "order": 2,
+                "action": "Find the exit to the Halani Gates",
+                "optional": false,
+                "tip": "Stairs up means you are on the right way"
+              },
+              {
+                "order": "opt",
+                "action": "Find and loot the Bell Chest",
+                "optional": true,
+                "tip": "Two level 6 uncut skill gems (UNCONFIRMED)"
               }
             ],
             "quests": []
@@ -556,14 +832,50 @@
             "layout_image_name": "A2-05-Halani-Gates.webp",
             "layout_confidence": "Very High",
             "suggested_route": "Follow the extremely set, narrow layout, moving in the opposite direction from the entrance and crossing the bridges.",
+            "notes": "Kill Jamanra. Go down stairs and to bottom right of zone, then back to town. Take waypoint to Trial of Sekhemas later.",
             "points_of_interest": [
               {
                 "name": "Boss: Jamanra, the Risen King",
-                "reward": "Advances The Trail of Corruption quest"
+                "reward": "Advances The Trail of Corruption quest",
+                "optional": false,
+                "location_hint": "Keep close to canyon - cross canyon three times to find boss"
               },
               {
-                "name": "L’Im, the Impaler (Optional)",
-                "reward": "Rare Items"
+                "name": "L'Im, the Impaler (Optional)",
+                "reward": "Rare Items",
+                "optional": true,
+                "location_hint": "Optional boss encounter"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find and kill Jamanra the Risen King",
+                "optional": false,
+                "tip": "Keep close to canyon - cross canyon three times"
+              },
+              {
+                "order": 2,
+                "action": "Go down the stairs and to the bottom right of the zone, then back to town",
+                "optional": false,
+                "tip": "Narrow linear layout - move opposite direction from entrance"
+              }
+            ],
+            "town_visits": [
+              {
+                "after_zone": "The Halani Gates",
+                "instructions": "Speak to Zarka and turn in her quest (level 7 uncut skill gems)",
+                "order": 1
+              },
+              {
+                "after_zone": "The Halani Gates",
+                "instructions": "Use the desert map to go to the Trial of Sekhemas. Take waypoint, then go back to town. Do first ascendancy trial whenever ready.",
+                "order": 2
+              },
+              {
+                "after_zone": "The Halani Gates",
+                "instructions": "Talk to everyone, then use desert map to go to Keth",
+                "order": 3
               }
             ],
             "quests": []
@@ -573,14 +885,45 @@
             "layout_image_name": "A2-06-Keth.webp",
             "layout_confidence": "Medium",
             "suggested_route": "Run the outside edges to find The Venom Pit (for Kabala) and the exit to The Lost City (often in the opposite corner of the central 'square').",
+            "notes": "Kill Kabala (somewhat in middle) for 2 skill points. Kill monsters until you find Kabala Clan relic (can drop in Lost City too). Exit always bottom right after big bridge.",
             "points_of_interest": [
               {
                 "name": "Boss: Kabala, Constrictor Queen",
-                "reward": "Book of Specialisation (+2 Weapon Set Skill Points)"
+                "reward": "Book of Specialisation (+2 Weapon Set Skill Points)",
+                "optional": false,
+                "location_hint": "Somewhat in the middle of zone - run outside edges to find Venom Pit"
               },
               {
                 "name": "Abandoned Prayer",
-                "reward": "Magic Amulet"
+                "reward": "Magic Amulet",
+                "optional": true,
+                "location_hint": "Optional treasure"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Kill Kabala, the Constrictor Queen",
+                "optional": false,
+                "tip": "Somewhat in middle - 2 skill points reward"
+              },
+              {
+                "order": 1,
+                "action": "Kill snake monsters until you find the Kabala Clan relic",
+                "optional": false,
+                "tip": "Can also drop in the Lost City"
+              },
+              {
+                "order": 1,
+                "action": "Find exit to the Lost City",
+                "optional": false,
+                "tip": "Always bottom right after big bridge - take checkpoint, do the rest if not done"
+              },
+              {
+                "order": 2,
+                "action": "Go to the Lost City",
+                "optional": false,
+                "tip": "Continue to next zone"
               }
             ],
             "quests": []
@@ -590,14 +933,39 @@
             "layout_image_name": "A2-07-Lost-City.png",
             "layout_confidence": "Medium",
             "suggested_route": "Cross the V-shaped bridge connecting the two large rectangular sections. Continue in the opposite direction from the entrance to locate the exit to Buried Shrines (often in a corner of the second rectangle).",
+            "notes": "Find exit to Buried Shrines. Two large rectangles connected by V-shaped bridge - exit often in corner of second rectangle.",
             "points_of_interest": [
               {
                 "name": "Golden Tomb",
-                "reward": "Uncut Spirit Gem (Level 6 or 7)"
+                "reward": "Uncut Spirit Gem (Level 6 or 7)",
+                "optional": true,
+                "location_hint": "Optional treasure in the city"
               },
               {
                 "name": "The Ninth Treasure of Keth (Optional Boss)",
-                "reward": "Magic Jewel"
+                "reward": "Magic Jewel",
+                "optional": true,
+                "location_hint": "Event named 'The Galleria' on the map - big gilded beetle"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find exit and go to the Buried Shrines",
+                "optional": false,
+                "tip": "Cross V-shaped bridge, continue opposite direction from entrance"
+              },
+              {
+                "order": "opt",
+                "action": "Find the Golden Tomb",
+                "optional": true,
+                "tip": "Uncut spirit gem"
+              },
+              {
+                "order": "opt",
+                "action": "Find the Ninth Treasure of Keth (big gilded beetle)",
+                "optional": true,
+                "tip": "Event name 'The Galleria' on map - Random Jewel"
               }
             ],
             "quests": []
@@ -607,18 +975,62 @@
             "layout_image_name": "A2-08-Buried-Shrines.png",
             "layout_confidence": "High",
             "suggested_route": "Think of it as two rectangles separated by a pair of bridges. The boss tile (crown shape) is usually at the most Northerly or East-facing point.",
+            "notes": "Find the Heart of Keth. Boss tile (crown shape) usually at most Northerly or East-facing point. Optional: guarded sarcophagus and elemental offering.",
             "points_of_interest": [
               {
                 "name": "Boss: Azarian, the Forsaken Son",
-                "reward": "City of Seven Waters progression"
+                "reward": "City of Seven Waters progression",
+                "optional": false,
+                "location_hint": "Crown-shaped boss tile at most Northerly or East-facing point"
               },
               {
                 "name": "Elemental Offering",
-                "reward": "Choice of Magic Resistance Ring (Ruby/Sapphire/Topaz)"
+                "reward": "Choice of Magic Resistance Ring (Ruby/Sapphire/Topaz)",
+                "optional": true,
+                "location_hint": "Random resistance ring - Ruby suggested for upcoming boss fight"
               },
               {
                 "name": "Suspicious Sarcophagus",
-                "reward": "Uncut Support Gem (Level 1)"
+                "reward": "Uncut Support Gem (Level 1)",
+                "optional": true,
+                "location_hint": "Guarded sarcophagus encounter"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find the Heart of Keth",
+                "optional": false,
+                "tip": "Two rectangles separated by bridges - boss at North or East point"
+              },
+              {
+                "order": "opt",
+                "action": "Find and loot the guarded sarcophagus",
+                "optional": true,
+                "tip": "Uncut support gem"
+              },
+              {
+                "order": "opt",
+                "action": "Find and complete the Elemental Offering Event",
+                "optional": true,
+                "tip": "Random resistance ring - Ruby suggested for upcoming boss fight"
+              }
+            ],
+            "town_visits": [
+              {
+                "after_zone": "Buried Shrines",
+                "instructions": "Enter Heart of Keth instance, kill Azarian, talk to the goddess, loot the cinders, burn the goddess, loot the essence of water",
+                "order": 1
+              },
+              {
+                "after_zone": "Buried Shrines",
+                "instructions": "Talk to Zarka in town (uncut support gem)",
+                "order": 2
+              },
+              {
+                "after_zone": "Buried Shrines",
+                "instructions": "Use desert map to go to Mastodon Badlands",
+                "order": 3
               }
             ],
             "quests": []
@@ -628,10 +1040,39 @@
             "layout_image_name": "A2-13-Mastodon-Badlands.webp",
             "layout_confidence": "Low",
             "suggested_route": "Hug a wall until you find the exit to The Bone Pits.",
+            "notes": "Find exit to Bone Pits. Find Lightless passage to unlock Well of Souls. Optional: kill hyenas until you find Sun Clan relic (more likely in Bone Pits).",
             "points_of_interest": [
               {
                 "name": "Fossilised Memorial",
-                "reward": "Uncut Support Gem (Level 1)"
+                "reward": "Uncut Support Gem (Level 1)",
+                "optional": true,
+                "location_hint": "Rare effigy near a checkpoint - Shrine of Bones"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find the exit to the Bone Pits",
+                "optional": false,
+                "tip": "Hug a wall until you find exit"
+              },
+              {
+                "order": 1,
+                "action": "Find the Lightless passage to unlock the Well of Souls",
+                "optional": false,
+                "tip": "Required for progression"
+              },
+              {
+                "order": "opt",
+                "action": "Kill hyena enemies until you found the Sun Clan relic",
+                "optional": false,
+                "tip": "Don't stress it - more likely to be found in the Bone Pits"
+              },
+              {
+                "order": "opt",
+                "action": "Find and loot the Shrine of Bones",
+                "optional": true,
+                "tip": "Rare effigy near checkpoint - Uncut support Gem"
               }
             ],
             "quests": []
@@ -641,10 +1082,45 @@
             "layout_image_name": "A2-14-Bone-Pits.webp",
             "layout_confidence": "High",
             "suggested_route": "The boss room is almost directly in line with the entrance area after passing through the bone arch.",
+            "notes": "Kill zone boss and loot horn. Kill hyenas until you find Sun Clan relic. Then portal back to town.",
             "points_of_interest": [
               {
                 "name": "Bosses: Iktab, the Deathlord and Ekbab, Ancient Steed",
-                "reward": "Uncut Support Gem (Level 1) (Quest Reward for 'A Theft of Ivory')"
+                "reward": "Uncut Support Gem (Level 1) (Quest Reward for 'A Theft of Ivory')",
+                "optional": false,
+                "location_hint": "Boss room almost directly in line with entrance after passing through bone arch"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find and kill the zone boss and loot the horn",
+                "optional": false,
+                "tip": "Directly in line with entrance after bone arch"
+              },
+              {
+                "order": 1,
+                "action": "Kill hyena enemies until you found the Sun Clan relic",
+                "optional": false,
+                "tip": "Required quest item"
+              },
+              {
+                "order": 2,
+                "action": "Portal back to town",
+                "optional": false,
+                "tip": "Complete quest turn-ins"
+              }
+            ],
+            "town_visits": [
+              {
+                "after_zone": "The Bone Pits",
+                "instructions": "Talk to Zarka (uncut support gem)",
+                "order": 1
+              },
+              {
+                "after_zone": "The Bone Pits",
+                "instructions": "Use desert map to go to the Valley of Titans",
+                "order": 2
               }
             ],
             "quests": []
@@ -654,10 +1130,39 @@
             "layout_image_name": "A2-09-Valley-Of-The-Titans.png",
             "layout_confidence": "Medium",
             "suggested_route": "Run the outside edge to find the three Ancient Seals required to open the sealed Titan Grotto Entrance (Red Hand icon).",
+            "notes": "Find and click three ancient seals. Find medallion and place two relics in it (waypoint here). Choose buff (can be changed later).",
             "points_of_interest": [
               {
                 "name": "Offering to Amrit Quest (Medallion)",
-                "reward": "Permanent Buff: +30% increased Charm Charges Gained or 15% increased Mana Recovery from Flasks"
+                "reward": "Permanent Buff: +30% increased Charm Charges Gained or 15% increased Mana Recovery from Flasks",
+                "optional": false,
+                "location_hint": "Waypoint at medallion location - choice of one of two permanent buffs (can be changed later)"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find and click the three ancient seals",
+                "optional": false,
+                "tip": "Run outside edge to find seals - opens Titan Grotto entrance"
+              },
+              {
+                "order": 1,
+                "action": "Find the medallion and place the two relics in it",
+                "optional": false,
+                "tip": "Waypoint is here - choose a buff (can be changed later at any time)"
+              },
+              {
+                "order": 1,
+                "action": "Find the exit to the Titan Grotto",
+                "optional": false,
+                "tip": "Red Hand icon when sealed"
+              },
+              {
+                "order": 2,
+                "action": "Go to the Titan Grotto",
+                "optional": false,
+                "tip": "Continue to boss"
               }
             ],
             "quests": []
@@ -667,14 +1172,49 @@
             "layout_image_name": "A2-10-Titan-Grotto.png",
             "layout_confidence": "Medium",
             "suggested_route": "Travel from the starting area to the opposite side of the 'rectangle' to find the long staircase bridge leading to the boss, Zalmarath.",
+            "notes": "Kill boss, then go back to town. Quest reward: uncut support gem and 500 gold.",
             "points_of_interest": [
               {
                 "name": "Boss: Zalmarath, the Colossus",
-                "reward": "Uncut Support Gem (Level 1) & 500 Gold (Quest Reward)"
+                "reward": "Uncut Support Gem (Level 1) & 500 Gold (Quest Reward)",
+                "optional": false,
+                "location_hint": "Opposite side of rectangle - long staircase bridge leads to boss"
               },
               {
                 "name": "Titan's Sword",
-                "reward": "Random Lesser Rune"
+                "reward": "Random Lesser Rune",
+                "optional": true,
+                "location_hint": "Optional treasure in grotto"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find and kill the boss, then go back to town",
+                "optional": false,
+                "tip": "Opposite side of rectangle - long staircase bridge"
+              }
+            ],
+            "town_visits": [
+              {
+                "after_zone": "The Titan Grotto",
+                "instructions": "Talk to Zarka, then Asala (uncut support gem)",
+                "order": 1
+              },
+              {
+                "after_zone": "The Titan Grotto",
+                "instructions": "Use the desert map to travel to the Halani Gates",
+                "order": 2
+              },
+              {
+                "after_zone": "The Titan Grotto",
+                "instructions": "Go to the front of the caravan and sound the horn",
+                "order": 3
+              },
+              {
+                "after_zone": "The Titan Grotto",
+                "instructions": "Use the desert map to travel to Deshar",
+                "order": 4
               }
             ],
             "quests": []
@@ -684,18 +1224,51 @@
             "layout_image_name": "A2-11-Deshar.png",
             "layout_confidence": "Medium/High",
             "suggested_route": "Check the base of the large buildings for the body of the fallen Dekhara Warrior (Final Letter). Continue travelling opposite the entrance to the furthest edge of the second area for the Path of Mourning exit.",
+            "notes": "Talk to abandoned rhoa. Find final letter on corpse near big tower (2 skill points on turn in). Find exit to Path of Mourning (enter, take waypoint, backtrack).",
             "points_of_interest": [
               {
                 "name": "Tradition's Toll Quest (Final Letter)",
-                "reward": "Book of Specialisation (+2 Weapon Set Skill Points)"
+                "reward": "Book of Specialisation (+2 Weapon Set Skill Points)",
+                "optional": false,
+                "location_hint": "Base of large buildings - corpse on ground near big tower"
               },
               {
                 "name": "The Unremembered (Skeleton)",
-                "reward": "Artificer's Orb"
+                "reward": "Artificer's Orb",
+                "optional": true,
+                "location_hint": "Optional treasure"
               },
               {
                 "name": "Rare Vulture Monsters",
-                "reward": "Djinn Barya"
+                "reward": "Djinn Barya",
+                "optional": true,
+                "location_hint": "Rare mob drops"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Talk to the abandoned rhoa BECAUSE IT'S THE RIGHT THING TO DO YOU MONSTER",
+                "optional": false,
+                "tip": "Important moral decision"
+              },
+              {
+                "order": 2,
+                "action": "Find the final letter on a corpse on the ground",
+                "optional": false,
+                "tip": "Near a big tower - 2 skill points on quest turn in"
+              },
+              {
+                "order": 2,
+                "action": "Find the exit to the Path of Mourning",
+                "optional": false,
+                "tip": "Enter zone, take waypoint, backtrack to Deshar"
+              },
+              {
+                "order": 3,
+                "action": "Go the the Path of Mourning",
+                "optional": false,
+                "tip": "Continue to next zone"
               }
             ],
             "quests": []
@@ -705,10 +1278,21 @@
             "layout_image_name": "A2-12-Path-Of-Mourning.png",
             "layout_confidence": "Low",
             "suggested_route": "Travel to the opposite side of the area (potential '3-3-3 Pattern').",
+            "notes": "Find exit to Spires of Deshar. Travel to opposite side of area.",
             "points_of_interest": [
               {
                 "name": "Hushed Urn",
-                "reward": "Uncut Skill Gem (Level 8)"
+                "reward": "Uncut Skill Gem (Level 8)",
+                "optional": true,
+                "location_hint": "Optional treasure along the path"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find the exit to the Spires of Deshar",
+                "optional": false,
+                "tip": "Travel to opposite side of area - potential 3-3-3 pattern"
               }
             ],
             "quests": []
@@ -718,14 +1302,51 @@
             "layout_image_name": "A2-15-Spires-of-Deshar.webp",
             "layout_confidence": "Medium",
             "suggested_route": "Tor Gul spawns in a straight line, directly opposite the entrance of the area.",
+            "notes": "Find Sisters of Garukhan for +10% lightning res. Kill Tor Gul (directly opposite entrance). Portal back to town.",
             "points_of_interest": [
               {
                 "name": "Boss: Tor Gul, the Defiler",
-                "reward": "Unlocks Ascent to Power quest"
+                "reward": "Unlocks Ascent to Power quest",
+                "optional": false,
+                "location_hint": "Spawns in straight line, directly opposite entrance"
               },
               {
                 "name": "Sisters of Garukhan",
-                "reward": "Permanent Buff: +10% to Lightning Resistance"
+                "reward": "Permanent Buff: +10% to Lightning Resistance",
+                "optional": false,
+                "location_hint": "Found in the spires"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find the Sisters of Garukhan",
+                "optional": false,
+                "tip": "+10% lightning resistance"
+              },
+              {
+                "order": 1,
+                "action": "Find and kill Tor Gul, the Defiler",
+                "optional": false,
+                "tip": "Directly opposite entrance in straight line"
+              },
+              {
+                "order": 2,
+                "action": "Portal back to town",
+                "optional": false,
+                "tip": "Turn in quests"
+              }
+            ],
+            "town_visits": [
+              {
+                "after_zone": "The Spires of Deshar",
+                "instructions": "Turn in the final letter at Shambrin (second 2 skill points)",
+                "order": 1
+              },
+              {
+                "after_zone": "The Spires of Deshar",
+                "instructions": "Talk to everyone, then use desert map to go to the Dreadnought",
+                "order": 2
               }
             ],
             "quests": []
@@ -735,10 +1356,34 @@
             "layout_image_name": "A2-16-Dreadnought.webp",
             "layout_confidence": "High",
             "suggested_route": "Straightforward, linear layout. Continue in the opposite direction of the entrance until the final boss arena.",
+            "notes": "Linear layout. Find exit to Dreadnought Vanguard, then find and kill Jamanra. Portal back to town, talk to Hooded One, go to Act 3.",
             "points_of_interest": [
               {
                 "name": "Final Boss: Jamanra, the Abomination",
-                "reward": "Completes The Trail of Corruption, End of Act 2"
+                "reward": "Completes The Trail of Corruption, End of Act 2",
+                "optional": false,
+                "location_hint": "Linear layout - continue opposite direction from entrance to final boss arena"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find the exit to the Dreadnought Vanguard, then find and kill Jamanra, the Abomination",
+                "optional": false,
+                "tip": "Linear layout - completes Act 2"
+              },
+              {
+                "order": 2,
+                "action": "Portal back to town",
+                "optional": false,
+                "tip": "End of Act 2"
+              }
+            ],
+            "town_visits": [
+              {
+                "after_zone": "The Dreadnought Vanguard",
+                "instructions": "Leave the Caravan, talk to the Hooded One, go back to the Caravan, talk to Asala to go to Act 3",
+                "order": 1
               }
             ],
             "quests": []
@@ -754,18 +1399,58 @@
             "layout_image_name": "A3-01-Sandswept-Marsh.webp",
             "layout_confidence": "High",
             "suggested_route": "Exit (Ziggurat Encampment) is found on the opposite far wall from the entrance. Run along that wall until found. Azak Campfire is nearby, check both sides.",
+            "notes": "Exit to Ziggurat Encampment on opposite far wall. Azak Campfire nearby - check both sides. Optional: Rootdredge and Hanging Tree.",
             "points_of_interest": [
               {
                 "name": "Boss: Rootdredge (Foul Ritual)",
-                "reward": "Uncut Skill Gem (Level 9)"
+                "reward": "Uncut Skill Gem (Level 9)",
+                "optional": true,
+                "location_hint": "Foul Ritual encounter - optional boss"
               },
               {
                 "name": "Azak Campfire (Orok Campsite)",
-                "reward": "Lesser Jeweller's Orb"
+                "reward": "Lesser Jeweller's Orb",
+                "optional": true,
+                "location_hint": "Near exit - kill the two rares - 'Azak Campfire'"
               },
               {
                 "name": "Hanging Tree (Click corpse)",
-                "reward": "Magic Ring"
+                "reward": "Magic Ring",
+                "optional": true,
+                "location_hint": "Click corpse on hanging tree"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find the exit to the Ziggurat Encampment (town)",
+                "optional": false,
+                "tip": "Opposite far wall from entrance - run along that wall"
+              },
+              {
+                "order": "opt",
+                "action": "Find and kill Rootdredge",
+                "optional": true,
+                "tip": "Level 9 uncut skill gem"
+              },
+              {
+                "order": "opt",
+                "action": "Find the Orok campsite and loot the rare basket",
+                "optional": true,
+                "tip": "'Azak Campfire' - kill the two rares - lesser jeweller's orb"
+              },
+              {
+                "order": "opt",
+                "action": "Find the Hanging Tree and loot the magic corpse",
+                "optional": true,
+                "tip": "Random magic ring"
+              }
+            ],
+            "town_visits": [
+              {
+                "after_zone": "Sandswept Marsh",
+                "instructions": "Talk to everyone and exit into the Jungle Ruins",
+                "order": 1
               }
             ],
             "quests": []
@@ -775,22 +1460,57 @@
             "layout_image_name": "A3-02-Jungle-Ruins-2.webp",
             "layout_confidence": "Medium",
             "suggested_route": "Follow one of the outside walls towards the opposite end (Infested Barrens entrance). Mighty Silverfist usually spawns in the top third of the area.",
+            "notes": "Find exit to Venom Crypts (near waypoint) - take checkpoint and waypoint, do NOT go through. Kill Mighty Silverfist for 2 skill points. Find exit to Infested Barrens - take checkpoint only.",
             "points_of_interest": [
               {
                 "name": "Boss: Mighty Silverfist",
-                "reward": "Book of Specialisation (+2 Weapon Set Skill Points)"
+                "reward": "Book of Specialisation (+2 Weapon Set Skill Points)",
+                "optional": false,
+                "location_hint": "Usually spawns in top third of area"
               },
               {
                 "name": "The Venom Crypts Entrance / Waypoint",
-                "reward": null
+                "reward": null,
+                "optional": false,
+                "location_hint": "Near waypoint - take checkpoint and waypoint, do NOT go through yet"
               },
               {
                 "name": "Jungle Grave (Servi quest)",
-                "reward": "Rare Rawhide or Linen Belt"
+                "reward": "Rare Rawhide or Linen Belt",
+                "optional": true,
+                "location_hint": "Servi quest item"
               },
               {
                 "name": "Troubled Camp",
-                "reward": "Gwendolyn Albright (Secret Vendor: Armour)"
+                "reward": "Gwendolyn Albright (Secret Vendor: Armour)",
+                "optional": true,
+                "location_hint": "Secret vendor - Armour"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find the exit to Venom Crypts (near waypoint)",
+                "optional": false,
+                "tip": "Do NOT go through, only take the checkpoint and waypoint"
+              },
+              {
+                "order": 1,
+                "action": "Find and kill the Mighty Silverfist",
+                "optional": false,
+                "tip": "2 skill points - usually in top third of area"
+              },
+              {
+                "order": 1,
+                "action": "Find the exit to the Infested Barrens",
+                "optional": false,
+                "tip": "Do NOT go through, only take the checkpoint"
+              },
+              {
+                "order": 2,
+                "action": "Go to the Infested Barrens",
+                "optional": false,
+                "tip": "Continue zone progression"
               }
             ],
             "quests": []
@@ -800,10 +1520,33 @@
             "layout_image_name": null,
             "layout_confidence": "N/A",
             "suggested_route": "Find the Corpse-snake Venom in The Den of the Serpent Priestess.",
+            "notes": "Find corpse for venom phial, then go back to town. Turn in phial at Servi for permanent buff reward (choice cannot be changed later).",
             "points_of_interest": [
               {
                 "name": "Corpse Snake Venom Quest Reward",
-                "reward": "Permanent Buff (Choice of +25% Stun Threshold, +30% Elemental Ailment Threshold, or +25% Mana Regeneration Rate); Artificer's Orb"
+                "reward": "Permanent Buff (Choice of +25% Stun Threshold, +30% Elemental Ailment Threshold, or +25% Mana Regeneration Rate); Artificer's Orb",
+                "optional": false,
+                "location_hint": "Den of the Serpent Priestess - reward is permanent and cannot be changed later"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find the corpse for the venom phial, then go back to town",
+                "optional": false,
+                "tip": "Located in Den of the Serpent Priestess"
+              }
+            ],
+            "town_visits": [
+              {
+                "after_zone": "The Venom Crypts",
+                "instructions": "Turn in phial at Servi for a reward - reward is permanent and cannot be changed later",
+                "order": 1
+              },
+              {
+                "after_zone": "The Venom Crypts",
+                "instructions": "Go to the Azak Bog",
+                "order": 2
               }
             ],
             "quests": []
@@ -813,14 +1556,45 @@
             "layout_image_name": "A3-03-Infested-Barrens.webp",
             "layout_confidence": "Medium",
             "suggested_route": "Run the outside edge of the area to locate exits to Chimeral Wetlands, Azak Bog, and Matlan Waterways.",
+            "notes": "Find exits to Chimeral Wetlands, Azak Bog, and Matlan Waterways. Enter each zone, take waypoint, backtrack to Barrens. Then portal back to Jungle Ruins.",
             "points_of_interest": [
               {
                 "name": "Troubled Camp",
-                "reward": "Sebastian Carroway (Secret Vendor: Weapons), guaranteed Rare Boots"
+                "reward": "Sebastian Carroway (Secret Vendor: Weapons), guaranteed Rare Boots",
+                "optional": true,
+                "location_hint": "Secret vendor - Weapons, guaranteed Rare Boots"
               },
               {
                 "name": "Larva Hollow (The Brood Queen)",
-                "reward": "Random loot"
+                "reward": "Random loot",
+                "optional": true,
+                "location_hint": "Optional boss encounter"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find the exit to Chimeral Wetlands",
+                "optional": false,
+                "tip": "Enter zone, take waypoint, backtrack to Infested Barrens"
+              },
+              {
+                "order": 1,
+                "action": "Find the exit to Azak Bog",
+                "optional": false,
+                "tip": "Enter zone, take waypoint, backtrack to Infested Barrens"
+              },
+              {
+                "order": 1,
+                "action": "Find the exit to the Matlan Waterways",
+                "optional": false,
+                "tip": "Waypoint of Barrens itself is here"
+              },
+              {
+                "order": 2,
+                "action": "From whatever you find last, take the waypoint and portal back to Jungle Ruins",
+                "optional": false,
+                "tip": "Return to complete Venom Crypts"
               }
             ],
             "quests": []
@@ -830,14 +1604,39 @@
             "layout_image_name": "A3-14-Azak-Bog.webp",
             "layout_confidence": "Medium",
             "suggested_route": "The boss, Ignagduk, spawns in the top right quadrant of this area (imagined as a square split into four blocks).",
+            "notes": "Optional: Flameskin ritual (25% fire res and rarity for rest of zone). Find and kill Ignagduk (+30 spirit). Then go to Chimeral Wetlands.",
             "points_of_interest": [
               {
                 "name": "Boss: Ignagduk, the Bog Witch",
-                "reward": "Permanent Buff: +30 to Maximum Spirit"
+                "reward": "Permanent Buff: +30 to Maximum Spirit",
+                "optional": false,
+                "location_hint": "Top right quadrant - area imagined as square split into four blocks"
               },
               {
                 "name": "Flameskin Ritual (Optional)",
-                "reward": "Temporary buff to Fire Resistance and Item Rarity"
+                "reward": "Temporary buff to Fire Resistance and Item Rarity",
+                "optional": true,
+                "location_hint": "If you find it before boss, don't skip. Don't search for it if you don't find it before boss."
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": "opt",
+                "action": "Find the Flameskin ritual and activate all",
+                "optional": true,
+                "tip": "25% fire res and rarity for rest of zone - don't search if not found before boss"
+              },
+              {
+                "order": 1,
+                "action": "Find and kill Ignagduk",
+                "optional": false,
+                "tip": "+30 spirit - top right quadrant"
+              },
+              {
+                "order": 2,
+                "action": "Go back to town and then to Chimeral Wetlands",
+                "optional": false,
+                "tip": "Via waypoint"
               }
             ],
             "quests": []
@@ -847,18 +1646,45 @@
             "layout_image_name": "A3-04-Chimeral Wetlands.png",
             "layout_confidence": "Medium",
             "suggested_route": "Hug the outside wall. Xyclucean's arena/Machinarium entrance always faces left/West; Temple of Chaos is always North-facing.",
+            "notes": "Find temple/trial of chaos (enter, take waypoint, backtrack - do trial later). Kill Chimera boss (follow lefthand border). Enter Jiquani's Machinarium.",
             "points_of_interest": [
               {
                 "name": "Boss: Xyclucian, The Chimera",
-                "reward": "Chimeral Inscribed Ultimatum (access to Trial of Chaos), Uncut Skill Gem (Level 9)"
+                "reward": "Chimeral Inscribed Ultimatum (access to Trial of Chaos), Uncut Skill Gem (Level 9)",
+                "optional": false,
+                "location_hint": "Follow lefthand border of zone - arena/Machinarium entrance faces left/West"
               },
               {
                 "name": "Toxic Bloom (Noxious Behemoth)",
-                "reward": "Guaranteed Magic Amulet"
+                "reward": "Guaranteed Magic Amulet",
+                "optional": true,
+                "location_hint": "Optional encounter"
               },
               {
                 "name": "Ravaged Camp",
-                "reward": "Guaranteed Rare Armour"
+                "reward": "Guaranteed Rare Armour",
+                "optional": true,
+                "location_hint": "Optional treasure"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find the temple/trial of chaos",
+                "optional": false,
+                "tip": "Enter zone, take waypoint, waypoint back to Wetlands - do trial at any point from now on"
+              },
+              {
+                "order": 1,
+                "action": "Find and kill the Chimera boss",
+                "optional": false,
+                "tip": "Follow lefthand border of zone - unlocks Trial of Chaos"
+              },
+              {
+                "order": 2,
+                "action": "Enter Jiquani's Machinarium",
+                "optional": false,
+                "tip": "Behind the Chimera boss"
               }
             ],
             "quests": []
@@ -868,14 +1694,51 @@
             "layout_image_name": "A3-05-Jinquanis-Machinarium.webp",
             "layout_confidence": "Medium",
             "suggested_route": "Find Small Soul Cores (listen for the jingle) to proceed. The exit to Sanctum is usually in a straight line from the start of the second section. Blackjaw spawns on the far left or right.",
+            "notes": "Find 3 small soul cores (only 2 needed - 3rd door has gold and chest). Kill Blackjaw (+10% fire res). Exit to Sanctum. Checkpoint port to exit.",
             "points_of_interest": [
               {
                 "name": "Boss: Blackjaw, the Remnant",
-                "reward": "Permanent Buff: +10% to Fire Resistance"
+                "reward": "Permanent Buff: +10% to Fire Resistance",
+                "optional": false,
+                "location_hint": "Spawns on far left or right"
               },
               {
                 "name": "Unmarked Treasure Vaults (Requires Soul Core)",
-                "reward": "Gold and Rare Chests"
+                "reward": "Gold and Rare Chests",
+                "optional": true,
+                "location_hint": "Third door - optional treasure"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find the first small soul core, then open the door",
+                "optional": false,
+                "tip": "Either left or right of Alva - listen for jingle"
+              },
+              {
+                "order": 2,
+                "action": "Find two more small soul cores",
+                "optional": false,
+                "tip": "3 total, only 2 needed - 3rd door only some gold and chest"
+              },
+              {
+                "order": 2,
+                "action": "Find the exit towards Jiquani's Sanctum",
+                "optional": false,
+                "tip": "Usually straight line from start of second section"
+              },
+              {
+                "order": 2,
+                "action": "Find and kill Blackjaw",
+                "optional": false,
+                "tip": "+10% fire res"
+              },
+              {
+                "order": 3,
+                "action": "Checkpoint port to the exit, then go to Jiquani's Sanctum",
+                "optional": false,
+                "tip": "Continue progression"
               }
             ],
             "quests": []
@@ -885,18 +1748,69 @@
             "layout_image_name": "A3-06-Jinquanis-Sanctum.png",
             "layout_confidence": "High",
             "suggested_route": "Locate a Generator toward the back end of each of the two mirrored sections. Use Medium Soul Cores to power both.",
+            "notes": "Activate waypoint right after entry. Talk to Alva. Find 2 medium soul cores (random). Activate both generators (left and right back relative to Alva). Wait for soul core to arrive at Alva. Kill Zicoatl, loot large soul core. Go to Infested Barrens waypoint.",
             "points_of_interest": [
               {
                 "name": "Boss: Zicoatl, Warden of the Core",
-                "reward": "Large Soul Core"
+                "reward": "Large Soul Core",
+                "optional": false,
+                "location_hint": "Must wait for second soul core to arrive at Alva (red lines on ground)"
               },
               {
                 "name": "Paquate's Mechanism (Corruption Altar)",
-                "reward": "Optional free 'Vaal Orb' item corruption"
+                "reward": "Optional free 'Vaal Orb' item corruption",
+                "optional": true,
+                "location_hint": "Optional corruption altar"
               },
               {
                 "name": "Grand Soul Core Nexus",
-                "reward": "Uncut Spirit Gem (Level 10)"
+                "reward": "Uncut Spirit Gem (Level 10)",
+                "optional": true,
+                "location_hint": "Optional treasure"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Activate the waypoint right after the entry",
+                "optional": false,
+                "tip": "Important for backtracking"
+              },
+              {
+                "order": 2,
+                "action": "Talk to Alva",
+                "optional": false,
+                "tip": "Quest progression"
+              },
+              {
+                "order": 3,
+                "action": "Find two medium soul cores",
+                "optional": false,
+                "tip": "Soul cores completely random in zone"
+              },
+              {
+                "order": 3,
+                "action": "Activate both generators",
+                "optional": false,
+                "tip": "Always to left and right back relative to where Alva is standing"
+              },
+              {
+                "order": 4,
+                "action": "Checkpoint back to Alva",
+                "optional": false,
+                "tip": "Still need to wait until second soul core arrived at Alva (red lines on ground)"
+              },
+              {
+                "order": 5,
+                "action": "Kill Zicoatl, Warden of the Core and loot the large soul core",
+                "optional": false,
+                "tip": "Required for progression"
+              },
+              {
+                "order": 6,
+                "action": "Go back to the Infested Barrens waypoint",
+                "optional": false,
+                "tip": "Insert large soul core there"
               }
             ],
             "quests": []
@@ -906,10 +1820,39 @@
             "layout_image_name": "A3-07-Matlan-Waterways.webp",
             "layout_confidence": "High",
             "suggested_route": "Linear area; must pull correct levers to lower water and proceed.",
+            "notes": "Insert large soul core and go to Matlan Waterways. Activate every lever to navigate through zone, then activate big one at end. Port back to town.",
             "points_of_interest": [
               {
                 "name": "Narag's Hut",
-                "reward": "Rare Weapon"
+                "reward": "Rare Weapon",
+                "optional": true,
+                "location_hint": "Optional treasure"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Activate every single lever to navigate through the zone, then activate the big one at the end",
+                "optional": false,
+                "tip": "Linear area - must pull correct levers to lower water"
+              },
+              {
+                "order": 2,
+                "action": "Port back to town",
+                "optional": false,
+                "tip": "Quest progression"
+              }
+            ],
+            "town_visits": [
+              {
+                "after_zone": "The Matlan Waterways",
+                "instructions": "Go down the stairs near the well / the Hooded One",
+                "order": 1
+              },
+              {
+                "after_zone": "The Matlan Waterways",
+                "instructions": "Talk to Alva, enter the Drowned City",
+                "order": 2
               }
             ],
             "quests": []
@@ -919,14 +1862,45 @@
             "layout_image_name": "A3-Drowned-City-Update.webp",
             "layout_confidence": "Medium",
             "suggested_route": "Two large blocks connected by an ambush area. Apex of Filth entrance (right/left) or Molten Vault (corner/side). Layout is the same as Utzaal (Past).",
+            "notes": "Find exit to Molten Vault (NW) - enter, take waypoint, backtrack (first character only). Find exit to Apex of Filth (NE) - enter, take waypoint, backtrack (first character only). Then enter Apex of Filth or Molten Vault.",
             "points_of_interest": [
               {
                 "name": "Crawler Ambush",
-                "reward": "Random loot"
+                "reward": "Random loot",
+                "optional": true,
+                "location_hint": "Ambush encounter between two blocks"
               },
               {
                 "name": "Foul Quarters (Multiple)",
-                "reward": "Gold, Chests, Rare/Magic Monsters"
+                "reward": "Gold, Chests, Rare/Magic Monsters",
+                "optional": true,
+                "location_hint": "Optional treasure rooms"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find the exit to the Molten Vault",
+                "optional": false,
+                "tip": "Almost always to NW - enter zone, take waypoint, backtrack (first character only)"
+              },
+              {
+                "order": 1,
+                "action": "Find the exit to the Apex of Filth",
+                "optional": false,
+                "tip": "Almost always to NE - enter zone, take waypoint, backtrack (first character only)"
+              },
+              {
+                "order": 2,
+                "action": "Enter the Molten Vault",
+                "optional": false,
+                "tip": "First character only - unlocks reforging bench"
+              },
+              {
+                "order": 3,
+                "action": "Enter the Apex of Filth",
+                "optional": false,
+                "tip": "Continue progression"
               }
             ],
             "quests": []
@@ -936,10 +1910,27 @@
             "layout_image_name": null,
             "layout_confidence": "High",
             "suggested_route": "Linear; kills boss quickly (under 4 minutes) before molten gold floods the area.",
+            "notes": "Linear. Kill boss quickly (under 4 minutes) before molten gold floods. Talk to Oswald back in town (first character only - unlocks reforging bench). Then enter Apex of Filth.",
             "points_of_interest": [
               {
                 "name": "Boss: Mektul, the Forgemaster",
-                "reward": "Uncut Skill Gem (Level 10), Unlocks Reforging Bench, Artificer's Orb (Quest Reward)"
+                "reward": "Uncut Skill Gem (Level 10), Unlocks Reforging Bench, Artificer's Orb (Quest Reward)",
+                "optional": false,
+                "location_hint": "Linear - kill quickly under 4 minutes before molten gold floods"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find and kill the boss, then talk to Oswald back in town",
+                "optional": false,
+                "tip": "First character only - unlocks reforging bench"
+              },
+              {
+                "order": 2,
+                "action": "Enter the Apex of Filth",
+                "optional": false,
+                "tip": "Continue to next zone"
               }
             ],
             "quests": [
@@ -954,18 +1945,40 @@
             "layout_image_name": "A3-Apex-of-Filth-Updated.webp",
             "layout_confidence": "High",
             "suggested_route": "Spiral pattern curling inwards. Boss is found at the top wall of the large main area.",
+            "notes": "Huge spiral (clockwise or counterclockwise). Travel full 360° to find boss. Portal back to town after killing Queen of Filth.",
             "points_of_interest": [
               {
                 "name": "Boss: Queen of Filth",
-                "reward": null
+                "reward": null,
+                "optional": false,
+                "location_hint": "Spiral pattern - boss at top wall of main area after traveling full 360°"
               },
               {
                 "name": "The Gentle Crone (Secret Vendor)",
-                "reward": "Sells higher quality Jewellery and Spellcaster gear"
+                "reward": "Sells higher quality Jewellery and Spellcaster gear",
+                "optional": true,
+                "location_hint": "Secret vendor"
               },
               {
                 "name": "The Crone's Cauldron (Requires 3 Fungi)",
-                "reward": "Quality Life and Mana flasks"
+                "reward": "Quality Life and Mana flasks",
+                "optional": true,
+                "location_hint": "Optional treasure - requires 3 fungi"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find and kill the Queen of Filth, then portal back to town",
+                "optional": false,
+                "tip": "Huge spiral - travel full 360° to find boss at top wall"
+              }
+            ],
+            "town_visits": [
+              {
+                "after_zone": "Apex of Filth",
+                "instructions": "Go down the stairs near the well / the Hooded One again, and enter the Temple of Kopec (opposite of the Drowned City)",
+                "order": 1
               }
             ],
             "quests": []
@@ -975,10 +1988,28 @@
             "layout_image_name": "A3-10-Temple-of-Kopec.webp",
             "layout_confidence": "High",
             "suggested_route": "Triangular layout; find the entrance to the next floor in one of the three corners.",
+            "notes": "Triangle-shaped zone. Go up stairs twice, then kill Ketzuli. Stay in shade to not take damage. Stairs in corners of triangle.",
             "points_of_interest": [
               {
                 "name": "Boss: Ketzuli, High Priest of the Sun",
-                "reward": "Uncut Skill Gem (Level 11)"
+                "reward": "Uncut Skill Gem (Level 11)",
+                "optional": false,
+                "location_hint": "Go up stairs twice - stay in shade to not take damage"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Go up the stairs twice, then kill Ketzuli, High Priest of the Sun",
+                "optional": false,
+                "tip": "Triangular zone - stairs in corners - stay in shade to not take damage"
+              }
+            ],
+            "town_visits": [
+              {
+                "after_zone": "Temple of Kopec",
+                "instructions": "Talk to Alva and ride the elevator up, go through the gateway, then down the stairs again to enter Utzaal",
+                "order": 1
               }
             ],
             "quests": []
@@ -988,14 +2019,39 @@
             "layout_image_name": "a3-utzaal.webp",
             "layout_confidence": "High",
             "suggested_route": "Same layout as The Drowned City. Boss (Viper Napuatzi) is typically towards the right end of the zone, facing North.",
+            "notes": "Same layout as Drowned City. Sacrificial heart can randomly drop here (if not found, continue to Aggorat). Kill Viper Napuatzi (towards right end, facing north). Find exit to Aggorat (top right, facing north).",
             "points_of_interest": [
               {
                 "name": "Boss: Viper Napuatzi",
-                "reward": "Uncut Support Gem (Level 2)"
+                "reward": "Uncut Support Gem (Level 2)",
+                "optional": false,
+                "location_hint": "Towards right end of zone, facing North"
               },
               {
                 "name": "Perculiar Fortunes (Golden Idols)",
-                "reward": "Various Idols that can be sold to Oswald for Gold (500-1500 Gold each)"
+                "reward": "Various Idols that can be sold to Oswald for Gold (500-1500 Gold each)",
+                "optional": true,
+                "location_hint": "Optional treasure - sellable for 500-1500 gold each"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": "opt",
+                "action": "The sacrificial heart can randomly drop in this zone",
+                "optional": true,
+                "tip": "If you don't find it in Utzaal, just go to next zone - do not farm until it drops"
+              },
+              {
+                "order": 1,
+                "action": "Search and kill Viper Napuatzi",
+                "optional": false,
+                "tip": "Towards right end of zone, facing North"
+              },
+              {
+                "order": 2,
+                "action": "Find the exit to Aggorat and enter Aggorat",
+                "optional": false,
+                "tip": "Again always to top right end of zone, facing north"
               }
             ],
             "quests": []
@@ -1005,18 +2061,63 @@
             "layout_image_name": "A3-12-Aggorat.png",
             "layout_confidence": "High",
             "suggested_route": "Find the large 'worship platform'. The exit to Black Chambers is usually top left; Sacrificial table is usually top right.",
+            "notes": "Follow voices of Trial of Atziri (sound on beneficial). Exit to Black Chambers after big plaza (top left). Sacrificial table after big plaza (top right). Kill monsters until you find sacrificial heart (if not found yet). Checkpoint port to table, loot dagger, place heart, stab heart (2 skill points). Checkpoint port to Black Chambers.",
             "points_of_interest": [
               {
                 "name": "Sacrificial Altar (Blood Sacrifice Quest)",
-                "reward": "Book of Specialisation (+2 Weapon Set Skill Points)"
+                "reward": "Book of Specialisation (+2 Weapon Set Skill Points)",
+                "optional": false,
+                "location_hint": "After big plaza, top right end of zone"
               },
               {
                 "name": "Vaal Goliaths (Drop Sacrificial Heart)",
-                "reward": null
+                "reward": null,
+                "optional": false,
+                "location_hint": "Kill monsters until you find it - required quest item"
               },
               {
                 "name": "Peculiar Fortunes (Golden Idols)",
-                "reward": "Idols sellable for Gold"
+                "reward": "Idols sellable for Gold",
+                "optional": true,
+                "location_hint": "Optional treasure"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Follow the voices of the Trial of Atziri (on the big plaza), go through to find the next checkpoint",
+                "optional": false,
+                "tip": "Sound on is beneficial in this zone!"
+              },
+              {
+                "order": 2,
+                "action": "Find the exit towards the Black Chambers",
+                "optional": false,
+                "tip": "After big plaza, always to top left end of zone"
+              },
+              {
+                "order": 2,
+                "action": "Find the Sacrificial table",
+                "optional": false,
+                "tip": "After big plaza, always to top right end of zone"
+              },
+              {
+                "order": 3,
+                "action": "The sacrificial heart can randomly drop in this zone",
+                "optional": false,
+                "tip": "If you haven't found it until now, continue to kill monsters until you find it"
+              },
+              {
+                "order": 4,
+                "action": "Checkpoint port to the sacrificial table, loot the dagger, place the heart, stab the heart",
+                "optional": false,
+                "tip": "2 skill points reward"
+              },
+              {
+                "order": 5,
+                "action": "Checkpoint port to the Black Chambers, enter the Black Chambers",
+                "optional": false,
+                "tip": "Final zone of Act 3"
               }
             ],
             "quests": []
@@ -1026,10 +2127,28 @@
             "layout_image_name": "A3-13-Black-Chambers.png",
             "layout_confidence": "High",
             "suggested_route": "Three major sections separated by bridges. Doryani's arena is on the opposite side from the entrance, along the center line.",
+            "notes": "Final boss of Act 3. Three sections separated by bridges. Doryani's arena on opposite side from entrance along center line (top left or top right depending on entry angle).",
             "points_of_interest": [
               {
                 "name": "Final Boss: Doryani, Royal Thaumaturge",
-                "reward": "Completes Act 3"
+                "reward": "Completes Act 3",
+                "optional": false,
+                "location_hint": "Opposite side from entrance along center - top left or top right depending on entry angle"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find and defeat Doryani, Royal Thaumaturge",
+                "optional": false,
+                "tip": "Three sections separated by bridges - opposite side from entrance"
+              }
+            ],
+            "town_visits": [
+              {
+                "after_zone": "The Black Chambers",
+                "instructions": "Go through Portal to the encampment, speak with Doryani, after the cataclysm speak with him again, then speak with the Sin and eventually Alva to get to Act 4 (Kingsmarch)",
+                "order": 1
               }
             ],
             "quests": []
@@ -1045,10 +2164,27 @@
             "layout_image_name": null,
             "layout_confidence": "N/A",
             "suggested_route": "Talk to Doryani, Alva, Rog, and Makoru (Captain of Aurora May) to unlock the island map.",
+            "notes": "Speak with Doryani, then Alva. Take the Boat Charter. Speak with Tujen, Ange, Kanu and then with Makoru to select an island to travel to. Whakapanu Island suggested first (for currency exchange/trading ASAP). Arastas suggested after three main islands (Whakapanu, Shrike, Prison). Ngakanu suggested after Arastas.",
             "points_of_interest": [
               {
                 "name": "Makoru (Captain)",
-                "reward": "Grants access to Karui Archipelago map"
+                "reward": "Grants access to Karui Archipelago map",
+                "optional": false,
+                "location_hint": "Speak with Makoru to select island - islands can be done in almost any order"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Speak with Doryani, then Alva and take the Boat Charter",
+                "optional": false,
+                "tip": "Begin Act 4 progression"
+              },
+              {
+                "order": 2,
+                "action": "Speak with Tujen, Ange, Kanu and then with Makoru to select an island to travel to",
+                "optional": false,
+                "tip": "Whakapanu Island suggested first - Arastas after three main islands - Ngakanu after Arastas"
               }
             ],
             "quests": []
@@ -1058,18 +2194,51 @@
             "layout_image_name": "A4-06-Whakapanu_Island.webp",
             "layout_confidence": "Complex/Resolved",
             "suggested_route": "Use this area to catch up on XP; find the entrance to Singing Caverns, usually at the far end of the island.",
+            "notes": "Optional: Crabshell cavern (alongside beach). Find Shark Pit to kill Great White One for Shark fin (across island on beach - move close to water). Find Petrified Pirate for torn map piece. Find exit to Singing Caverns (far end of island).",
             "points_of_interest": [
               {
                 "name": "Boss: The Great White One (Shark Pit)",
-                "reward": "Shark Fin quest item"
+                "reward": "Shark Fin quest item",
+                "optional": false,
+                "location_hint": "Across island on another beach - trigger fight by moving close to water at gaps in rock formation"
               },
               {
                 "name": "Petrified Pirate",
-                "reward": "Torn Map Piece"
+                "reward": "Torn Map Piece",
+                "optional": false,
+                "location_hint": "Torn map piece for unlocking Plunder's Point (4 total needed)"
               },
               {
                 "name": "Crabshell Cavern (Clawcrunch)",
-                "reward": "Uncut Support Gem (Level 4)"
+                "reward": "Uncut Support Gem (Level 4)",
+                "optional": true,
+                "location_hint": "Alongside the beach part of area - defeat the rare"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": "opt",
+                "action": "Find the Crabshell cavern and defeat the rare",
+                "optional": true,
+                "tip": "Alongside beach - level 4 uncut support gem"
+              },
+              {
+                "order": 1,
+                "action": "Find the Shark Pit to defeat the Great White One and loot the Shark fin",
+                "optional": false,
+                "tip": "Across island on beach - trigger by moving close to water at gaps in rock"
+              },
+              {
+                "order": 1,
+                "action": "Find the Petrified Pirate to get the torn map piece",
+                "optional": false,
+                "tip": "1 of 4 torn map pieces - unlocks Plunder's Point"
+              },
+              {
+                "order": 1,
+                "action": "Find the exit to the Singing Caverns",
+                "optional": false,
+                "tip": "Approximately far end of island compared to starting point (UNCONFIRMED)"
               }
             ],
             "quests": []
@@ -1079,14 +2248,39 @@
             "layout_image_name": "A4-07-Singing-Caverns.webp",
             "layout_confidence": "Resolved (4 designs)",
             "suggested_route": "The boss is located on the opposite side of the 'square' from the entrance (circular or diamond shape layout).",
+            "notes": "Optional: Beckoning Clam (complete counter for humming pearl - turn in at Rog for rare amulet). Find Chamber of Echoes and kill Diamora. Go back to ship and select new location.",
             "points_of_interest": [
               {
                 "name": "Boss: Diamora, Song of Death",
-                "reward": "Weapon Piece, Shoreline Hideout (unlocks hideout after speaking to Ange)"
+                "reward": "Weapon Piece, Shoreline Hideout (unlocks hideout after speaking to Ange)",
+                "optional": false,
+                "location_hint": "Opposite side of square from entrance - circular or diamond shape layout"
               },
               {
                 "name": "Beckoning Clam (Humming Pearl)",
-                "reward": "Rare Pearlescent Amulet (Quest turn-in to Rog)"
+                "reward": "Rare Pearlescent Amulet (Quest turn-in to Rog)",
+                "optional": true,
+                "location_hint": "Complete counter to loot pearl - +8 all ele resistance rare amulet"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": "opt",
+                "action": "Find the Beckoning Clam and complete the counter to loot the Humming Pearl",
+                "optional": true,
+                "tip": "Turn in whenever back in town at Rog - rare amulet +8 all ele res"
+              },
+              {
+                "order": 1,
+                "action": "Find the Chamber of Echoes and kill Diamora, Song of Death, then speak to the Hooded One",
+                "optional": false,
+                "tip": "Final boss of Whakapanu Island - unlocks Shoreline Hideout"
+              },
+              {
+                "order": 2,
+                "action": "Go back to the Ship and select a new location",
+                "optional": false,
+                "tip": "Click UI element on top left of screen to get to ship"
               }
             ],
             "quests": []
@@ -1096,14 +2290,39 @@
             "layout_image_name": "A4-05-Shrike Island.webp",
             "layout_confidence": "Incredibly linear",
             "suggested_route": "Follow the long and winding road; the boss is located at the end.",
+            "notes": "Incredibly linear. Optional: Corpse nest for torn map piece. Find corrupted nests and kill Scourge of the Skies at end.",
             "points_of_interest": [
               {
                 "name": "Boss: Scourge of the Skies",
-                "reward": "Weapon Piece"
+                "reward": "Weapon Piece",
+                "optional": false,
+                "location_hint": "End of long winding road - linear path"
               },
               {
                 "name": "Corpse Nest",
-                "reward": "Torn Map Piece"
+                "reward": "Torn Map Piece",
+                "optional": false,
+                "location_hint": "2 of 4 torn map pieces - unlocks Plunder's Point"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": "opt",
+                "action": "Find the Corpse nest encounter and loot the torn map piece",
+                "optional": false,
+                "tip": "2 of 4 torn map pieces"
+              },
+              {
+                "order": 1,
+                "action": "Find the corrupted nests and kill the Scourge of the Skies",
+                "optional": false,
+                "tip": "Linear path - boss at end"
+              },
+              {
+                "order": 2,
+                "action": "Go back to the Ship and select a new location",
+                "optional": false,
+                "tip": "Click UI element on top left of screen"
               }
             ],
             "quests": []
@@ -1113,10 +2332,33 @@
             "layout_image_name": null,
             "layout_confidence": "100% Resolved (4 designs)",
             "suggested_route": "Locate the entrance to Solitary Confinement.",
+            "notes": "Kill monsters until Chapel Key drops. Find and open Chapel Door, kill rare and minions (30% increased Mana or Life Recovery from flasks - can be changed later). Find exit to Solitary Confinement.",
             "points_of_interest": [
               {
                 "name": "Goddess of Justice (Requires Chapel Key)",
-                "reward": "Permanent Buff (Choice: 30% increased Life or Mana Recovery from Flasks)"
+                "reward": "Permanent Buff (Choice: 30% increased Life or Mana Recovery from Flasks)",
+                "optional": false,
+                "location_hint": "Chapel Key drops from monsters - reward can be changed later by revisiting"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Kill monsters until the Chapel Key drops",
+                "optional": false,
+                "tip": "Required for permanent buff"
+              },
+              {
+                "order": 1,
+                "action": "Find and open the Chapel Door, kill the rare and its minions",
+                "optional": false,
+                "tip": "30% increased Mana or Life Recovery from flasks - can be changed later"
+              },
+              {
+                "order": 2,
+                "action": "Find the exit to the Solitary Confinement",
+                "optional": false,
+                "tip": "Continue to next zone"
               }
             ],
             "quests": []
@@ -1126,14 +2368,39 @@
             "layout_image_name": "A4-09-Solitary-Confinement.webp",
             "layout_confidence": "100% Resolved (Linear)",
             "suggested_route": "Hug the wall that the waves are crashing into.",
+            "notes": "Linear. Optional: Bronnach the Manhunter (guaranteed unique + rares). Find and kill The Prisoner. Go back to Ship.",
             "points_of_interest": [
               {
                 "name": "Boss: The Prisoner",
-                "reward": "Weapon Piece"
+                "reward": "Weapon Piece",
+                "optional": false,
+                "location_hint": "Hug wall that waves are crashing into - linear path"
               },
               {
                 "name": "Bronnach, the Manhunter (Optional)",
-                "reward": "Guaranteed unique item and some rares"
+                "reward": "Guaranteed unique item and some rares",
+                "optional": true,
+                "location_hint": "Drops guaranteed unique (UNCONFIRMED)"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": "opt",
+                "action": "Find and kill Bronnach, the Manhunter",
+                "optional": true,
+                "tip": "Guaranteed unique item and some rares (UNCONFIRMED)"
+              },
+              {
+                "order": 1,
+                "action": "Find and kill The Prisoner",
+                "optional": false,
+                "tip": "Hug wall that waves crash into"
+              },
+              {
+                "order": 2,
+                "action": "Go back to the Ship and select a new location",
+                "optional": false,
+                "tip": "Click UI element on top left"
               }
             ],
             "quests": []
@@ -1143,18 +2410,51 @@
             "layout_image_name": "A4-01-Isle_of_Kin.webp",
             "layout_confidence": "Medium",
             "suggested_route": "Head in the opposite direction from the dock. Locate the entrance to Volcanic Warrens on the far end of the area along the furthest wall from the start.",
+            "notes": "Optional: Beast pen (free and kill Mimbok - lvl 12 skill gem + lvl 4 support gem). Find wrecked boat for torn map piece. Find Primal arena and kill Blind Beast (2 skill points). Find exit to Volcanic Warrens.",
             "points_of_interest": [
               {
                 "name": "Boss: The Blind Beast (Primal Arena)",
-                "reward": "Book of Specialisation (+2 Weapon Set Skill Points)"
+                "reward": "Book of Specialisation (+2 Weapon Set Skill Points)",
+                "optional": false,
+                "location_hint": "Head opposite direction from dock"
               },
               {
                 "name": "Beast Pen (Mimbok the Enslaved)",
-                "reward": "Uncut Skill Gem (Level 12) + Uncut Support Gem (Level 4)"
+                "reward": "Uncut Skill Gem (Level 12) + Uncut Support Gem (Level 4)",
+                "optional": true,
+                "location_hint": "Find beast pen counter, free and kill Mimbok (UNCONFIRMED)"
               },
               {
                 "name": "Wrecked Boat (Flayed Sailor)",
-                "reward": "Torn Map Piece"
+                "reward": "Torn Map Piece",
+                "optional": false,
+                "location_hint": "3 of 4 torn map pieces - unlocks Plunder's Point"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": "opt",
+                "action": "Find the beast pen counter and free and kill Mimbok the Enslaved",
+                "optional": true,
+                "tip": "Lvl 12 uncut skill gem + lvl 4 uncut support gem (UNCONFIRMED)"
+              },
+              {
+                "order": 1,
+                "action": "Find the wrecked boat and loot the torn map piece from the flayed sailor",
+                "optional": false,
+                "tip": "3 of 4 torn map pieces"
+              },
+              {
+                "order": 1,
+                "action": "Find the Primal arena and kill The Blind Beast",
+                "optional": false,
+                "tip": "2 skill points - head opposite from dock"
+              },
+              {
+                "order": 2,
+                "action": "Find the exit to the Volcanic Warrens",
+                "optional": false,
+                "tip": "Far end along furthest wall from start"
               }
             ],
             "quests": []
@@ -1164,14 +2464,39 @@
             "layout_image_name": "A4-02-Volcanic-Warrens.webp",
             "layout_confidence": "N/A",
             "suggested_route": "Long and winding area; boss spawn is on the opposite side of where you enter.",
+            "notes": "Long winding area. Find Tyrant's throne and kill Krutog. Speak with Matiki. Go back to Ship.",
             "points_of_interest": [
               {
                 "name": "Boss: Krutog, Lord of Kin",
-                "reward": null
+                "reward": null,
+                "optional": false,
+                "location_hint": "Opposite side of where you enter - long winding area"
               },
               {
                 "name": "Volcanic Nest",
-                "reward": "Possible Rare Ruby Ring"
+                "reward": "Possible Rare Ruby Ring",
+                "optional": true,
+                "location_hint": "Optional treasure"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find the Tyrant's throne and kill Krutog, Lord of Kin",
+                "optional": false,
+                "tip": "Opposite side from entrance"
+              },
+              {
+                "order": 2,
+                "action": "Speak with Matiki",
+                "optional": false,
+                "tip": "Quest progression"
+              },
+              {
+                "order": 3,
+                "action": "Go back to the Ship and select a new location",
+                "optional": false,
+                "tip": "Click UI element on top left"
               }
             ],
             "quests": []
@@ -1181,10 +2506,27 @@
             "layout_image_name": "A4-03-Kedge Bay.webp",
             "layout_confidence": "Very Easy",
             "suggested_route": "Follow the path to the other side.",
+            "notes": "Fully optional zone. Find dead man's chest for torn map piece. Find exit to Journey's End.",
             "points_of_interest": [
               {
                 "name": "Smuggler's Stash",
-                "reward": "Torn Map Piece"
+                "reward": "Torn Map Piece",
+                "optional": false,
+                "location_hint": "4 of 4 torn map pieces - unlocks Plunder's Point"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": "opt",
+                "action": "Find the dead man's chest and loot the torn map piece",
+                "optional": false,
+                "tip": "4 of 4 torn map pieces - unlocks Plunder's Point"
+              },
+              {
+                "order": 1,
+                "action": "Find the exit to Journey's End",
+                "optional": false,
+                "tip": "Very easy linear path"
               }
             ],
             "quests": []
@@ -1194,10 +2536,70 @@
             "layout_image_name": "A4-04-Journeys_End.webp",
             "layout_confidence": "N/A",
             "suggested_route": "Get to the opposite side, furthest from where you entered.",
+            "notes": "Summon and speak to Tujen. Optional: Rigged ship (timed loot). Find Captain's Chair, kill Captain Hartlin, loot Verisium. Go back to beginning, talk to Freya Hartlin. Go to town, speak with Dannig, take Verisium Spikes. Return to Journey's End, talk to Freya. Impale totems, finish Delirium by killing Omniphobia (2 skill points). Go back to Ship.",
             "points_of_interest": [
               {
                 "name": "Boss: Omniphobia (Dark Mists Quest)",
-                "reward": "Book of Specialisation (+2 Weapon Set Skill Points) (NEW IN 0.4)"
+                "reward": "Book of Specialisation (+2 Weapon Set Skill Points) (NEW IN 0.4)",
+                "optional": false,
+                "location_hint": "Opposite side, furthest from entrance"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Summon and speak to Tujen",
+                "optional": false,
+                "tip": "Quest progression"
+              },
+              {
+                "order": "opt",
+                "action": "Find and loot the rigged ship",
+                "optional": true,
+                "tip": "Timer starts on first chest - any loot not picked up will disappear"
+              },
+              {
+                "order": 2,
+                "action": "Find the Captain's Chair, kill Captain Hartlin and loot the Verisium",
+                "optional": false,
+                "tip": "Required quest item"
+              },
+              {
+                "order": 3,
+                "action": "Go back to the beginning (via checkpoint) and talk to Freya Hartlin",
+                "optional": false,
+                "tip": "Quest progression"
+              },
+              {
+                "order": 4,
+                "action": "Go back to town, speak with Dannig and take the Verisium Spikes",
+                "optional": false,
+                "tip": "Required item"
+              },
+              {
+                "order": 5,
+                "action": "Return to Journey's End and talk to Freya Hartlin again",
+                "optional": false,
+                "tip": "Quest progression"
+              },
+              {
+                "order": 6,
+                "action": "Impale the totems and then finish the Delirium encounter by killing Omniphobia",
+                "optional": false,
+                "tip": "2 skill points reward - NEW IN 0.4"
+              },
+              {
+                "order": 7,
+                "action": "Go back to the Ship and select a new location",
+                "optional": false,
+                "tip": "Click UI element on top left"
+              }
+            ],
+            "town_visits": [
+              {
+                "after_zone": "Journey's End",
+                "instructions": "Speak with Tujen (Town) to get quest reward (level 13 uncut skill gem)",
+                "order": 1
               }
             ],
             "quests": []
@@ -1207,18 +2609,51 @@
             "layout_image_name": "A4-12-Arastas.webp",
             "layout_confidence": "Resolved (4 designs)",
             "suggested_route": "Exit town, hug the top wall (Coastal Ridge) to find the bells, then return to the central path to find the arena for Torvian.",
+            "notes": "Optional: Loot Evening and Morning Bell (3 regal, 3 exalted). Talk to and follow Missionary Lorandis into church, then out. Destroy forcefield, kill everyone. Continue to Excavated Pit, kill Torvian (extra currency). Enter Excavation.",
             "points_of_interest": [
               {
                 "name": "Boss: Torvian, Hand of the Savior",
-                "reward": null
+                "reward": null,
+                "optional": false,
+                "location_hint": "Return to central path after finding bells - arena for Torvian"
               },
               {
                 "name": "Morning Bell",
-                "reward": "3 Regal Orbs"
+                "reward": "3 Regal Orbs",
+                "optional": true,
+                "location_hint": "Hug top wall (Coastal Ridge)"
               },
               {
                 "name": "Evening Bell",
-                "reward": "3 Exalted Orbs"
+                "reward": "3 Exalted Orbs",
+                "optional": true,
+                "location_hint": "Hug top wall (Coastal Ridge)"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": "opt",
+                "action": "Loot the Evening and Morning Bell",
+                "optional": true,
+                "tip": "Some extra currency - 3x regal, 3x exalted"
+              },
+              {
+                "order": 1,
+                "action": "Talk to and then follow Missionary Lorandis into the church, then go out again. Destroy the forcefield with any attack/spell and then kill everyone",
+                "optional": false,
+                "tip": "Quest progression"
+              },
+              {
+                "order": 2,
+                "action": "Continue until you find the Excavated Pit and kill Torvian, Hand of the Saviour",
+                "optional": false,
+                "tip": "Some extra currency"
+              },
+              {
+                "order": 3,
+                "action": "Enter the Excavation",
+                "optional": false,
+                "tip": "Continue to next zone"
               }
             ],
             "quests": []
@@ -1228,14 +2663,46 @@
             "layout_image_name": "A4-13-Excavation.webp",
             "layout_confidence": "N/A",
             "suggested_route": "Two large blocks connected by a small central square. Hug a wall until you find the boss/Precursor Forge area.",
+            "notes": "Optional: Excavated cache (lvl 4 support gem). Find Precursor Forge, defeat Benedictus. Witness lore events, talk to Hidden One, return to town via portal. Then talk to Hidden One again, talk to Rodri on ship to set sail to Ngakanu.",
             "points_of_interest": [
               {
                 "name": "Boss: Benedictus, First Herald of Utopia",
-                "reward": "Precursor Forge (unlocked after witnessing lore)"
+                "reward": "Precursor Forge (unlocked after witnessing lore)",
+                "optional": false,
+                "location_hint": "Two blocks connected by small central square - hug wall to find boss/forge"
               },
               {
                 "name": "Excavated Cache",
-                "reward": "Uncut Support Gem (Level 4)"
+                "reward": "Uncut Support Gem (Level 4)",
+                "optional": true,
+                "location_hint": "Optional treasure"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": "opt",
+                "action": "Find the Excavated cache",
+                "optional": true,
+                "tip": "Level 4 uncut support gem"
+              },
+              {
+                "order": 1,
+                "action": "Find the Precursor Forge and defeat Benedictus, First Herald of Utopia",
+                "optional": false,
+                "tip": "Hug wall - two blocks connected by small square"
+              },
+              {
+                "order": 2,
+                "action": "Witness the lore events and then talk to the Hidden One, then return to town via portal",
+                "optional": false,
+                "tip": "Unlocks Precursor Forge"
+              }
+            ],
+            "town_visits": [
+              {
+                "after_zone": "Excavation",
+                "instructions": "Talk to the Hidden One again, then talk to Rodri on the ship to set sail to Ngakanu",
+                "order": 1
               }
             ],
             "quests": []
@@ -1245,10 +2712,39 @@
             "layout_image_name": "A4-10-Eye of Hinekora.webp",
             "layout_confidence": "N/A",
             "suggested_route": "Snake-like funnel. Complete three challenge rooms. One path leads to Silent Hall, the other to Halls of the Dead.",
+            "notes": "Snake-like funnel. Optional: rare chest behind waterfall when you get out of caves (lvl 12 skill gem UNCONFIRMED). Complete three 'test of mettle' encounters (linear). Find Silent Hall, press F to pay respects (talk to Navali - 5% increased max mana). Find exit to Hall of Dead.",
             "points_of_interest": [
               {
                 "name": "Silent Hall (Navali's Gift)",
-                "reward": "Permanent Buff: 5% increased Maximum Mana"
+                "reward": "Permanent Buff: 5% increased Maximum Mana",
+                "optional": false,
+                "location_hint": "Room behind - talk to Navali for lore"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": "opt",
+                "action": "When you briefly get out of the caves again there is a rare chest behind a waterfall",
+                "optional": true,
+                "tip": "Level 12 uncut skill gem (UNCONFIRMED)"
+              },
+              {
+                "order": 1,
+                "action": "Progress through the cavern and complete each 'test of mettle' encounter",
+                "optional": false,
+                "tip": "Very linear - impossible to miss anything except maybe next one"
+              },
+              {
+                "order": 2,
+                "action": "Find the Silent Hall and press F to pay your respects in the room behind it",
+                "optional": false,
+                "tip": "Talk to Navali for lore - 5% increased maximum mana"
+              },
+              {
+                "order": 3,
+                "action": "Find the exit to the Hall of the Dead",
+                "optional": false,
+                "tip": "Continue to next zone"
               }
             ],
             "quests": []
@@ -1258,14 +2754,39 @@
             "layout_image_name": "A4-11-Halls-of-the-Dead.webp",
             "layout_confidence": "N/A",
             "suggested_route": "Find the three Hinekora Totems (Tawhoa, Tasalio, Ngamahu) on the corners of an imaginary rectangle to gain permanent buffs before fighting Yama the White.",
+            "notes": "Find three tests (Tawhoa, Tasalio, Ngamahu), loot blank tattoos at end. Turn in at Totem in Arena, use Tattoo to gain bonus (cannot be changed later UNCONFIRMED). Find Yama's Test, defeat Yama, loot silver coin. Exit to Trial of Ancestors behind Yama encounter.",
             "points_of_interest": [
               {
                 "name": "Hinekora Totems (3 rewards)",
-                "reward": "Choice of +5% Res or +5 Attribute (+5% Fire Res or +5 Str, +5% Cold Res or +5 Dex, +5% Lightning Res or +5 Int)"
+                "reward": "Choice of +5% Res or +5 Attribute (+5% Fire Res or +5 Str, +5% Cold Res or +5 Dex, +5% Lightning Res or +5 Int)",
+                "optional": false,
+                "location_hint": "Corners of imaginary rectangle - reward cannot be changed later (UNCONFIRMED)"
               },
               {
                 "name": "Boss: Yama the White",
-                "reward": "Access to Trial of the Ancestors"
+                "reward": "Access to Trial of the Ancestors",
+                "optional": false,
+                "location_hint": "Find after collecting three tattoos"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find the three tests (Tawhoa, Tasalio, Ngamahu) and loot their blank tattoos at the end. Turn in at the Totem in the Arena and use the Tattoo afterwards to gain the bonus",
+                "optional": false,
+                "tip": "5 dex or 5% lightning res (Tawhoa), 5 int or 5% cold res, 5 str or 5% fire res (Ngamahu) - cannot be changed later (UNCONFIRMED)"
+              },
+              {
+                "order": 2,
+                "action": "Find Yama's Test, defeat Yama the White and loot the silver coin afterwards",
+                "optional": false,
+                "tip": "Unlocks Trial of Ancestors"
+              },
+              {
+                "order": 3,
+                "action": "Exit to the Trial of the Ancestors behind the Yama encounter",
+                "optional": false,
+                "tip": "Continue to next zone"
               }
             ],
             "quests": []
@@ -1275,10 +2796,33 @@
             "layout_image_name": null,
             "layout_confidence": "N/A",
             "suggested_route": "Complete the Trial and speak to Hinekora (Navali).",
+            "notes": "Third way of acquiring ascendency points (not yet implemented). Talk to Navali to get Tattoo of Hinekora (2 passive skill points). Go back to Ship (currently bugged?).",
             "points_of_interest": [
               {
                 "name": "Hinekora (Navali)",
-                "reward": "Book of Specialisation (+2 Weapon Set Skill Points)"
+                "reward": "Book of Specialisation (+2 Weapon Set Skill Points)",
+                "optional": false,
+                "location_hint": "Complete trial for 2 passive skill points - third ascendancy path not yet implemented"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Talk to Navali and get the Tattoo of Hinekora",
+                "optional": false,
+                "tip": "2 passive skill points"
+              },
+              {
+                "order": "NYI",
+                "action": "Future third way of acquiring ascendency points",
+                "optional": true,
+                "tip": "Not yet implemented"
+              },
+              {
+                "order": 2,
+                "action": "Go back to the Ship and select a new location",
+                "optional": false,
+                "tip": "Click UI element on top left (currently bugged?)"
               }
             ],
             "quests": []
@@ -1288,10 +2832,27 @@
             "layout_image_name": "A4-14-Ngakanu.webp",
             "layout_confidence": "Easy",
             "suggested_route": "Find the boundary edge after leaving the large building and follow it to Heart of the Tribe.",
+            "notes": "Optional: Medicine Circle (kill monsters, talk to Kaimana - only lore). Find and enter Heart of the Tribe.",
             "points_of_interest": [
               {
                 "name": "Abyss",
-                "reward": "Possible Greater Jeweller's Orb drop"
+                "reward": "Possible Greater Jeweller's Orb drop",
+                "optional": true,
+                "location_hint": "Optional treasure"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": "opt",
+                "action": "Find the Medicine Circle, kill the monsters and talk to Kaimana",
+                "optional": true,
+                "tip": "Only some lore"
+              },
+              {
+                "order": 1,
+                "action": "Find and enter the Heart of the Tribe",
+                "optional": false,
+                "tip": "Find boundary edge after leaving large building, follow to Heart of Tribe"
               }
             ],
             "quests": []
@@ -1301,14 +2862,33 @@
             "layout_image_name": "A4-15-Heart-of-the-tribe.webp",
             "layout_confidence": "Easy",
             "suggested_route": "Continually head Northerly; the final boss is in the direction opposite the nearest Checkpoint.",
+            "notes": "Final boss of Act 4. Find Sacred Interior and defeat Tavakai. Go back to town, speak with Hooded One. Completes Act 4, onwards with interludes.",
             "points_of_interest": [
               {
                 "name": "Final Boss: Tavakai the Fallen / Tavakai the Consumed",
-                "reward": "Completes Act 4"
+                "reward": "Completes Act 4",
+                "optional": false,
+                "location_hint": "Head Northerly - opposite direction from nearest checkpoint"
               },
               {
                 "name": "Meeting House",
-                "reward": "Bonus objective/free loot"
+                "reward": "Bonus objective/free loot",
+                "optional": true,
+                "location_hint": "Optional treasure"
+              }
+            ],
+            "walkthrough_steps": [
+              {
+                "order": 1,
+                "action": "Find the Sacred Interior and defeat Tavakai",
+                "optional": false,
+                "tip": "Head Northerly - opposite direction from checkpoint"
+              },
+              {
+                "order": 2,
+                "action": "Go back to the Town and speak with the Hooded One",
+                "optional": false,
+                "tip": "End of Act 4 - onwards with interludes"
               }
             ],
             "quests": []

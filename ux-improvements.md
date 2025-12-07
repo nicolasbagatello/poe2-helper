@@ -3,7 +3,7 @@
 ## Document Purpose
 Track planned improvements, new features, and design changes for the PoE2 Campaign Zone Guide.
 
-**Last Updated:** 2025-12-06 (v1.1.0 features completed)
+**Last Updated:** 2025-12-07 (v1.2.0 features completed - CSV Walkthrough Integration)
 
 ---
 
@@ -150,6 +150,18 @@ Based on impact vs. effort, prioritize in this order:
 ## Changelog
 
 ### Version History
+- **v1.2.0** - CSV Walkthrough Data Integration (2025-12-07)
+  - 📊 **Complete Data Integration**: Integrated CSV walkthrough data for all 68 zones across Acts 1-4
+  - ✅ **Optional Content Toggle**: Added "Hide Optional" button to show/hide optional POIs and content
+  - 📋 **Walkthrough Mode**: New "Show Walkthrough" button displays step-by-step walkthrough instructions with checkboxes
+  - 📍 **Location Hints**: POIs now show specific location hints (e.g., "Always north/northeast of waypoint")
+  - 🎯 **Optional POI Badges**: Optional POIs marked with "Optional" badge and lighter styling
+  - 💡 **Zone Tips**: Display CSV-derived tips and notes for each zone in a dedicated section
+  - 🏛️ **Town Visits**: Show ordered town visit instructions for quest sequences
+  - ✨ **Enhanced Data**: All zones now include `notes`, `optional` flags, `location_hint`, `walkthrough_steps`, and `town_visits` fields
+  - 🎨 **Walkthrough Styling**: Custom checkbox styles, order badges (#1, #2, OPT), and helpful tips for each step
+  - 🔄 **Dynamic UI**: Walkthrough sections appear/hide based on mode toggle, optional POIs filter based on visibility setting
+
 - **v1.1.0** - Major UX update (2025-12-06/07)
   - ✨ **Quick Wins**: Added tooltips to all buttons, version number display, last updated timestamp, and GitHub star button
   - 🔍 **Search**: Real-time search filtering in header for zones, bosses, and rewards
