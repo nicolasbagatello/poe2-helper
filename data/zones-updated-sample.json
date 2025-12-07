@@ -1,0 +1,156 @@
+{
+  "game": "Path of Exile 2",
+  "version": "0.3/0.4 (skeleton)",
+  "notes": "Sample showing new structure with CSV data integration",
+  "acts": [
+    {
+      "act_number": 1,
+      "act_name": "Ogham",
+      "zones": [
+        {
+          "zone_name": "Clearfell",
+          "layout_image_name": ["Clearfell-Seed-1-Pilot.webp", "Clearfell-Seed-2-Pilot.webp"],
+          "layout_confidence": "Very High",
+          "suggested_route": "Head to the North to kill the boss. The Mysterious Campsite spawns to the left or right of the starting zone.",
+          "notes": "Beira is always north/northeast of waypoint. Mud Burrow and the worm boss can be skipped.",
+          "points_of_interest": [
+            {
+              "name": "Boss: Beira of the Rotten Pack",
+              "reward": "Permanent Buff: +10% Cold Resistance",
+              "optional": false,
+              "location_hint": "Always north/northeast of waypoint"
+            },
+            {
+              "name": "Mysterious Campsite (Abandoned Stash)",
+              "reward": "Uncut Skill Gem (Level 1)",
+              "optional": true,
+              "location_hint": "Spawns to the left or right of the starting zone"
+            },
+            {
+              "name": "Mud Burrow Entrance / Waypoint",
+              "reward": null,
+              "optional": true,
+              "location_hint": "Can be skipped - worm boss is not required"
+            }
+          ],
+          "walkthrough_steps": [
+            {
+              "order": 1,
+              "action": "Kill Beira of the Rotten Pack",
+              "optional": false,
+              "tip": "Boss is always north/northeast of waypoint"
+            },
+            {
+              "order": 2,
+              "action": "Find exit to Grelwood",
+              "optional": false,
+              "tip": "Use checkpoint from Beira to come back here if you find the exit first"
+            },
+            {
+              "order": "opt",
+              "action": "Find the Mysterious Campsite",
+              "optional": true,
+              "tip": "Spawns to left or right of starting zone"
+            }
+          ],
+          "quests": []
+        },
+        {
+          "zone_name": "The Grelwood",
+          "layout_image_name": "Grelwood-Pilot.png",
+          "layout_confidence": "High",
+          "suggested_route": "Follow the diamond pattern to find the four main points of interest. The Red Vale entrance is usually in the same quadrant as the Brambleghast arena.",
+          "notes": "Find waypoint first (somewhat in center). Enter zones to take their waypoints, then backtrack to Grelwood.",
+          "points_of_interest": [
+            {
+              "name": "Boss: The Brambleghast",
+              "reward": "Uncut Skill Gem (Level 2)",
+              "optional": true,
+              "location_hint": "Usually in same quadrant as Red Vale entrance"
+            },
+            {
+              "name": "Aregane's Hut (Witch Hut)",
+              "reward": "Medium Life and Medium Mana Flask, Uncut Support Gem (Level 1)",
+              "optional": true,
+              "location_hint": "Look for the Cauldron encounter"
+            },
+            {
+              "name": "Tree of Souls + Waypoint",
+              "reward": null,
+              "optional": false,
+              "location_hint": "Somewhat in center of zone"
+            },
+            {
+              "name": "Grim Tangle Entrance",
+              "reward": null,
+              "optional": false,
+              "location_hint": "Enter zone, take waypoint, then backtrack to Grelwood"
+            },
+            {
+              "name": "The Red Vale Entrance",
+              "reward": null,
+              "optional": false,
+              "location_hint": "Enter zone, take waypoint, then backtrack to Grelwood"
+            }
+          ],
+          "walkthrough_steps": [
+            {
+              "order": 1,
+              "action": "Find waypoint and talk to quest NPC",
+              "optional": false,
+              "tip": "Waypoint is somewhat in center of zone"
+            },
+            {
+              "order": 2,
+              "action": "Find exit to Grim Tangle",
+              "optional": false,
+              "tip": "Enter zone, take waypoint, backtrack to Grelwood"
+            },
+            {
+              "order": 2,
+              "action": "Find exit to Red Vale",
+              "optional": false,
+              "tip": "Enter zone, take waypoint, backtrack to Grelwood"
+            },
+            {
+              "order": 3,
+              "action": "Go to Red Vale",
+              "optional": false,
+              "tip": "Either via waypoint or checkpoint"
+            },
+            {
+              "order": "opt",
+              "action": "Find and kill Brambleghast",
+              "optional": true,
+              "tip": "Level 1 uncut skill gem reward"
+            },
+            {
+              "order": "opt",
+              "action": "Find the Cauldron in the Witch Hut encounter",
+              "optional": true,
+              "tip": "Free medium mana/life flask"
+            }
+          ],
+          "town_visits": [
+            {
+              "after_zone": "The Red Vale",
+              "instructions": "Go back to town, get runic tools from Renly",
+              "order": 1
+            },
+            {
+              "after_zone": "The Red Vale",
+              "instructions": "Go to Grelwood waypoint, click the three runes, talk to Una",
+              "order": 2
+            },
+            {
+              "after_zone": "The Red Vale",
+              "instructions": "Go back to town, talk to Una",
+              "order": 3
+            }
+          ],
+          "quests": []
+        }
+      ]
+    }
+  ]
+}

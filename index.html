@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Path of Exile 2 Campaign Zone Guide - Track your progress through all acts with detailed zone layouts, boss information, and rewards.">
+    <meta name="keywords" content="Path of Exile 2, PoE2, zone guide, campaign guide, layouts, bosses">
+    <title>Path of Exile 2 - Campaign Zone Guide</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicon.svg">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="header-title-wrapper">
+                <svg class="header-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                    <rect width="64" height="64" fill="#1a1410" rx="6"/>
+                    <rect x="2" y="2" width="60" height="60" fill="none" stroke="#c9a961" stroke-width="2" rx="4"/>
+                    <path d="M 10 10 L 16 10 L 16 12 L 12 12 L 12 16 L 10 16 Z" fill="#c9a961" opacity="0.7"/>
+                    <path d="M 54 10 L 48 10 L 48 12 L 52 12 L 52 16 L 54 16 Z" fill="#c9a961" opacity="0.7"/>
+                    <path d="M 10 54 L 16 54 L 16 52 L 12 52 L 12 48 L 10 48 Z" fill="#c9a961" opacity="0.7"/>
+                    <path d="M 54 54 L 48 54 L 48 52 L 52 52 L 52 48 L 54 48 Z" fill="#c9a961" opacity="0.7"/>
+                    <defs>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <text x="32" y="42" font-family="serif" font-size="18" font-weight="bold" fill="#ffd700" text-anchor="middle" filter="url(#glow)" opacity="0.5">PoE2</text>
+                    <text x="32" y="42" font-family="serif" font-size="18" font-weight="bold" fill="#d4af37" text-anchor="middle">PoE2</text>
+                </svg>
+                <h1 class="header-title">Path of Exile 2 - Campaign Zone Guide</h1>
+            </div>
+            <p class="header-subtitle">Track your progress through the campaign</p>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input
+                    type="text"
+                    id="searchInput"
+                    class="search-input"
+                    placeholder="Search zones, bosses, rewards..."
+                    aria-label="Search zones"
+                    autocomplete="off"
+                />
+                <span class="search-icon">🔍</span>
+                <button id="clearSearch" class="clear-search hidden" aria-label="Clear search" title="Clear search text">✕</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Progress Bar Section -->
+    <section class="progress-section">
+        <div class="container">
+            <div class="progress-info">
+                <span class="progress-text" id="progressText">0 / 65 zones completed (0%)</span>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="progressBarFill"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Dashboard -->
+    <section class="stats-section">
+        <div class="container">
+            <button class="stats-toggle" id="statsToggle" aria-label="Toggle statistics dashboard" title="Show/Hide detailed statistics">
+                📊 Show Statistics
+            </button>
+            <div class="stats-dashboard hidden" id="statsDashboard">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value" id="statTotalZones">0 / 65</div>
+                        <div class="stat-label">Total Zones</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="statAct1">0 / 17</div>
+                        <div class="stat-label">Act 1</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="statAct2">0 / 16</div>
+                        <div class="stat-label">Act 2</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="statAct3">0 / 15</div>
+                        <div class="stat-label">Act 3</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="statAct4">0 / 17</div>
+                        <div class="stat-label">Act 4</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="statBooks">0 / 9</div>
+                        <div class="stat-label">Books of Specialisation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Controls Section -->
+    <section class="controls-section">
+        <div class="container">
+            <div class="controls-group">
+                <div class="reward-filter-wrapper">
+                    <label for="rewardFilter" class="reward-filter-label">Filter by Reward:</label>
+                    <select id="rewardFilter" class="reward-filter-select" aria-label="Filter zones by reward type" title="Show only zones with specific rewards">
+                        <option value="all">All Rewards</option>
+                        <option value="book-of-spec">Book of Specialisation</option>
+                        <option value="permanent-buff">Permanent Buffs</option>
+                        <option value="skill-gem">Skill Gems</option>
+                        <option value="support-gem">Support Gems</option>
+                        <option value="passive-point">Passive Skill Points</option>
+                    </select>
+                </div>
+                <button class="btn btn-filter" id="filterBtn" aria-label="Toggle undone zones filter" title="Show only zones you haven't completed yet">
+                    <span class="btn-icon">&#9776;</span>
+                    Show Only Undone
+                </button>
+                <button class="btn btn-reset" id="resetBtn" aria-label="Reset all progress" title="Clear all your progress and start fresh">
+                    <span class="btn-icon">&#8634;</span>
+                    Reset All Progress
+                </button>
+            </div>
+            <div class="controls-group">
+                <button class="btn btn-export" id="exportBtn" aria-label="Export progress" title="Download your progress as a JSON file">
+                    <span class="btn-icon">&#11015;</span>
+                    Export Progress
+                </button>
+                <button class="btn btn-import" id="importBtn" aria-label="Import progress" title="Load progress from a JSON file">
+                    <span class="btn-icon">&#11014;</span>
+                    Import Progress
+                </button>
+                <input type="file" id="importFile" accept=".json" class="hidden" aria-hidden="true">
+            </div>
+            <div class="controls-group font-size-controls">
+                <span class="font-size-label">Font Size:</span>
+                <button class="btn btn-font-size" id="fontDecreaseBtn" aria-label="Decrease font size" title="Make text smaller">
+                    <span class="btn-icon">A-</span>
+                </button>
+                <button class="btn btn-font-size" id="fontIncreaseBtn" aria-label="Increase font size" title="Make text larger">
+                    <span class="btn-icon">A+</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Act Tabs Navigation -->
+    <nav class="act-tabs-nav">
+        <div class="container">
+            <div class="act-tabs" id="actTabs" role="tablist">
+                <!-- Tabs will be dynamically generated here -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content - Acts and Zones -->
+    <main class="main-content">
+        <div class="container" id="actsContainer">
+            <!-- Acts and zone cards will be dynamically generated here by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="lightbox-overlay" id="lightboxOverlay"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox" title="Close image viewer (ESC)">
+                &times;
+            </button>
+            <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image" title="Previous image (←)">
+                &#8249;
+            </button>
+            <img class="lightbox-image" id="lightboxImage" src="" alt="Zone layout">
+            <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image" title="Next image (→)">
+                &#8250;
+            </button>
+            <div class="lightbox-counter" id="lightboxCounter">1 / 1</div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Scroll to top">
+        &#8593;
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <p><strong>Path of Exile 2 - Campaign Zone Guide</strong></p>
+                    <p class="footer-version">Version 1.1.0 | Data: 0.3/0.4 (skeleton)</p>
+                    <p class="footer-updated">Last Updated: <span id="lastUpdated">2025-12-06</span></p>
+                </div>
+                <div class="footer-section">
+                    <p>Layout images and information compiled from community sources</p>
+                    <a href="https://github.com/nicolasbagatello/poe2-helper"
+                       class="github-button"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       title="Star this project on GitHub">
+                        ⭐ Star on GitHub
+                    </a>
+                </div>
+            </div>
+
+            <!-- Sources & Attribution -->
+            <div class="footer-sources">
+                <p class="footer-sources-title">📚 Sources & Credits:</p>
+                <div class="footer-sources-links">
+                    <a href="https://mobalytics.gg/poe-2/guides/campaign-layout-act-1"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="source-link"
+                       title="Mobalytics PoE2 Campaign Layout Guides">
+                        🗺️ Mobalytics Campaign Layouts
+                    </a>
+                    <a href="https://docs.google.com/spreadsheets/d/17D5MKBapwQvYm4hmgvGTReQHdOWHzdrj-RgLPB8P09A/edit?gid=476541532#gid=476541532"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="source-link"
+                       title="Community PoE2 Data Spreadsheet">
+                        📊 Community Data Spreadsheet
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

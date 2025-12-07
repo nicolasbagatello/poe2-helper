@@ -1,0 +1,48 @@
+"IF SOMETHING IS NOT MENTIONED, YOU DON'T HAVE TO DO IT",,,,
+"IF SOMETHING HAS THE SAME / NO ORDER, THE ORDER DOESN'T MATTER AS LONG AS YOU DO IT",,,,
+"""OPT"" means there is some optional stuff with something useful especially for first characters of a league, but not strictly required for progressing through the act",,,,
+Zone,Order ,Steps,Notes,Rewards
+Riverbank,,"Kill Boss, enter town",,
+Clearfell,,Kill Beira of the Rotten Pack,is always north/northeast of waypoint. Mud burrow and the worm boss can be skipped,10% coldres
+,,Find exit to grelwood,use checkpoint from beira to come back here if you find the exit first,
+,Opt,Find the Mysterious Campsite,,uncut support gem
+Grelwood,1,"Find waypoint, talk to quest NPC",somewhat in center of zone,
+,,Find exit to grim tangle,"enter zone, take waypoint, backtrack to grelwood",
+,,Find exit to red vale,"enter zone, take waypoint, backtrack to grelwood",
+,2,Go to red vale,either via waypoint or checkpoint,
+,Opt,Find and kill Brambleghast,,level 1 uncut skill gem
+,Opt,Find the Cauldron in the Witch Hut encounter,,free medium mana/life flask
+Red Vale,,Find the three obelisks and get the three quest items,,
+Intermediate,1,"Go back to town, get runic tools from Renly",,
+,2,"Go to Grelwood waypoint, click the three runes, talk to Una",,
+,3,"Go back to town, talk to una",,
+,4,Go to Grim Tangle waypoint,,
+Grim Tangle,,Find exit to cemetery of the eternals,,
+,Opt,Find and kill The Rotten Druid,,uncut support gem
+Cemetery of the Eternals,1,"Find the Mausoleum, kill the boss in there","On second boss, use checkpoint to teleport to zone beginning, then use waypoint to cemetery",
+,,"Find the Tomb, kill the boss in there",,
+,Opt,"In the Tomb, find the embattled trove ambush encounter",,Uncut support gem
+,2,"Talk to Lachlan, open the gate, kill lachlan",,
+,3,Enter Hunting Grounds,,
+Hunting Grounds,1,Find and kill Crowbell,,2 skillpoints
+,,Find exit to Ogham farmlands,"enter zone, take waypoint, backtrack to hunting grounds",
+,,Find exit to Freythorn,"enter zone, take waypoint, backtrack to hunting grounds",
+,2,Go to Freythorn,via townportal+waypoint if it isn't the last you have found,
+,Opt,Find and complete the Ritual site,,level 4 uncut skill gem
+,Opt,Find and finish the Dryad Encounter,,uncut support gem
+Freythorn,1,"Do all 4 rituals, kill king of the mists at the 4th",,30 spirit (normal only)
+,2,Go to Ogham farmlands,via townportal+waypoint,
+Ogham Farmlands,1,Find una's lute,somewhat in center of zone,2 skill points
+,2,Find exit to Ogham village,,
+,Opt,Find the Crop Circle and kill the rare dog,,level 4 uncut skill gem
+Ogham Village,1,Find Smithing tools,Only needed on first character per league,
+,2,Find and kill the executioner,,
+,3,Go to manor ramparts,,
+The Manor Ramparts,,Find exit to Ogham Manor,always go the opposite direction of the waypoint after you enter the zone,
+,Opt,Find the gallows,It's actually the location from the character creation screen,uncut support gem
+Ogham Manor,1,Find and kill candlemass,"If you find the stairs first, go down, take checkpoint, then go back up.
+you can then take the checkpoint from candlewood to the stairs once you found and killed it",
+,,Find and go down stairs twice,,
+,2,"Find elevator to boss, kill boss, go back to down",,
+Town,1,Talk to Renly to turn in the smithing tools,Only needed on first character per league,unlocks salvaging bench
+,2,Talk to the hooded one to go to act 2,,

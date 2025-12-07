@@ -1,0 +1,93 @@
+Act 4 is not linear at all. All major ports (red headlines) can be done in almost any order (UNCONFIRMED),,,,
+"IF SOMETHING HAS THE SAME / NO ORDER, THE ORDER DOESN'T MATTER AS LONG AS YOU DO IT",,,,
+"""OPT"" means there is some optional stuff with something useful especially for first characters of a league, but not strictly required for progressing through the act",,,,
+Zone,Order ,Steps,Notes,Rewards
+Town #1,1,"Speak with Doryani, then Alva and Take the Boat Charter",,
+,2,"Speak with Tujen, Ange, Kanu and then with Makoru to select an island to travel to","Whakapanu Island is suggested to be done first if you want to establish the currency exchange and asynchronus trading ASAP.
+
+Arastas is suggested to be done earliest after three ""main"" islands (Whakapanu, Shrike and Prison) due to the main story progression.
+Ngamahu is suggested to be done after Arastas
+
+UNCONFIRMED",
+At any point you are back in town or on the ship from activities (PARTIALLY UNCONFIRMED),,,,
+"Intermediate
+
+Town / Ship ",A,"Talk to Missionary Lorandis (town, in front of where Rog is) and click through all his dialogue to accept the quest to go to Arastas",After the first Island,
+,B,"Talk to Tavakai (Town, on the second ship)",After the first Island,
+,C,Talk to Makoru (ship) about any map pieces found,"Map pieces can be found on Whakapanu Island, Shrike Island, Isle of Kin and Kedge Bay",
+,,"After all four map pieces have been found, Plunder's Point is unlocked on the map",Optional island for some XP and loot,
+,D,"Return to Ange (town) and talk about the hideout (""Hostile Takeover"" quest), then travel to the shoreline hideout",After Whakapanu Island,
+,,Clear it and then invite her to your hideout to enable trading,,
+,E,"Once you got the Shark fin, Sail to Ngamahu and turn it at Kaimana
+Alternatively if you wait too long (until after Arastas), you have to wait until Act4 story is complete, and then turn it in at Kaimana in town (on the second ship)",,"one of: level 11 uncut skill gem, level 11 uncut spirit gem, level 4 uncut support gem"
+,F,Speak to Makoru,after 3 Islands complete,
+,G,"After Isle of Kin, speak with Matiki (Boat), it will unlock the Eye of Hinekora",,
+,H,Speak to Tujen (Town) to get quest reward,After Kedge Bay,level 13 uncut skill gem
+Whakapanu Island,,,,
+Whakapanu Island,Opt,Find the Crabshell cavern and defeat the rare,alongside the beach part of the area,level 4 uncut support gem
+,,Find the Shark Pit to defeat the Great White One and loot the Shark fin,"across the island on another beach. Trigger the fight by moving close to the water, to the gaps in the rock formation",
+,,Find the Petrified Pirate to get the torn map piece,,
+,1,Find the exit to the singing caverns,Approximately on the far end of the island compared to the starting pont (UNCONFIRMED),
+Singing Caverns,Opt,Find the Beckoning Clam and complete the counter to loot the humming pearl,Turn in whenever back in town at Rog,rare amulet with +8 all ele resistance
+,1,"Find the Chamber of Echoes and kill Diamora, Song of Death, then speak to the Hooded One",Final boss of Whakapanu Island,
+,2,Go back to the Ship and select a new location,Click the UI element on the top left of the screen to get to the ship,
+Shrike Island,,,,
+Shrike Island,Opt,Find the Corpse nest encounter and loot the torn map piece,,
+,1,Find the corrupted nests and kill the Scourge of the Skies,,
+,2,Go back to the Ship and select a new location,Click the UI element on the top left of the screen to get to the ship,
+Abandoned Prison,,,,
+Abandoned Prison,1,Kill Monsters (?) until the Chapel Key drops,,30% increased Mana or Life Recovery from flasks. Can be changed later by revisiting
+,,"Find and Open the Chapel Door, kill the rare and its minions.",,
+,2,Find the Exit to the Solitary Confinement,,
+Solitary Confinement,Opt,"Find and kill Bronnach, the Manhunter",Drops a guaranteed unique item and some rares (UNCONFIRMED),
+,1,Find and kill the prisoner,,
+,2,Go back to the Ship and select a new location,Click the UI element on the top left of the screen to get to the ship,
+Isle of Kin,,,,
+Isle of Kin,Opt,Find the beast pen counter and free and kill Mimbok the Enslaved,,lvl 12 uncut skill gem and lvl 4 uncut support gem (UNCONFIRMED)
+,,Find the wrecked boak and loot the torn map device from the flayed sailor,,
+,1,Find the Primal arena and kill The Blind Beast,,2 skill points
+,2,Find the exit to the Volcanic Warrens,,
+Volcanic Warrens,1,"Find the Tyrant's throne and kill Krutog, Lord of Kin",,
+,2,Speak with Matiki,,
+,3,Go back to the Ship and select a new location,Click the UI element on the top left of the screen to get to the ship,
+Kedge Bay (FULLY OPTIONAL),,,,
+Kedge Bay,Opt,Find the dead man's chest and loot the torn map device,,
+,1,Find the Exit to Journey's End,,
+Journey's End,1,Summon and speak to Tujen,,
+,Opt,Find and loot the rigged ship,"it will start a timer once you loot the first chest, and then will blow up. any loot not picked up by then will disappear",
+,2,"Find the Captain's Chair, kill Captain Hartlin and loot the Verisium",,
+,3,Go back to the beginning (via checkpoint) and talk to Freya Hartlin,,
+,4,"Go back to town, speak with Dannig and take the Verisium Spikes",,
+,5,Return to Journey's End and Talk to Freya Hartlin again,,
+,6,Impale the totems and then finish the Delirium encounter by killing Omniphobia,,
+,7,Go back to the Ship and select a new location,Click the UI element on the top left of the screen to get to the ship,
+Eye of Hinekora,,,,
+Eye of Hinekora,Opt,When you briefly get out of the caves again there is a rare chest behind a waterfall,,level 12 uncut skill gem (UNCONFIRMED)
+,1,"Progress through the cavern and complete each ""test of mettle"" encounter","it's very linear, impossible to miss anything except maybe for the next one",
+,2,Find the Silent hall and press F to Pay your respects in the room behind it,Talk to Navali for some lore,5% increased maximum mana
+,3,Find the exit to the Hall of the Dead,,
+Hall of the Dead,1,"Find the three tests (Tawhoa, Tasalio, Ngamahu) and loot their blank tattoos at the end. Turn in at the Totem in the Arena and use the Tattoo afterwards to gain the bonus",Reward cannot be changed later (UNCONFIRMED),"5 dex or 5% lightning resistance (Tawhoa)
+5 int or 5% cold resistance
+5 str or 5% fire resistance (Ngamahu)"
+,2,"Find Yama's Test, defeat Yama the White and loot the silver coin afterwards",,
+,3,Exit to the Trial of the Ancestors behind the Yama encounter,,
+Trial of the Ancestors,1,Talk to Navali and get the Tattoo of Hinekora,,2 passive skill points
+,NYI,Future third way of acquiring ascendency points,Not yet implemented,
+,2,Go back to the Ship and select a new location,Click the UI element on the top left of the screen to get to the ship (currently bugged?),
+Plunder's Point (only available after finding all four torn map pieces) (FULLY OPTIONAL),,,,
+Plunder's Point,1,"Summon and speak to Dannig, then place the explosives and start the Expedition encounter",,
+,2,Go back to the Ship and select a new location,Click the UI element on the top left of the screen to get to the ship,
+Arastas,,,,
+Arastas,Opt,Loot the Evening and Morning Bell,,
+,1,"Talk to and then follow Missionari Lorandis into the church, then go out again. Destroy the forcefield with any attack/spell and then kill everyone",,
+,2,"Continue until you find the Excavated Pit and kill Torvian, Hand of the Saviour",,"Some extra currency (3x regal, 3x exalted)"
+,3,Enter the Excavation,,
+The Excavation,Opt,Find the Excavated cache,,level 4 uncut support gem
+,1,"Find the Precursor Forge and defeat Benedictus, First Heral of Utopia",,
+,2,"witness the lore events and then talk to the hidden one, then return to town via portal",,
+Town intermediate,3,"Talk to the hidden one again, then talk to Rodri on the ship to set sail to Ngakanu",,
+Ngakanu,,,,
+Ngakanu,Opt,"Find the Medicine Circle, kill the monsters and talk to Kaimana",only some lore,
+,1,Find and enter the Heart of the tribe,,
+Heart of the Tribe,1,Find the Sacred Interior and defeat Tavakai,,
+,2,Go back to the Town and speak with the Hooded one,"This is the end of Act one, onwards with the interludes for now.",

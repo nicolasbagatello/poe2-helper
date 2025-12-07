@@ -1,0 +1,70 @@
+"IF SOMETHING IS NOT MENTIONED, YOU DON'T HAVE TO DO IT",,,,
+"IF SOMETHING HAS THE SAME / NO ORDER, THE ORDER DOESN'T MATTER AS LONG AS YOU DO IT",,,,
+"""OPT"" means there is some optional stuff with something useful especially for first characters of a league, but not strictly required for progressing through the act",,,,
+Zone,Order ,Steps,Notes,Rewards
+Sandswept Marsh,,Find the exit to the ziggurat encampment (town),,
+,Opt,Find and kill Rootredge,,level 9 uncut skill gem
+,Opt,Find the orok campsite and loot the rare basket,"""Azak Campfire"", kill the two rares",lesser jeweller's orb
+,Opt,Find the hanging tree and loot the magic corpse,,random magic ring
+Town #1,,Talk to everyone and exit into the Jungle Ruins,,
+Jungle Ruins #1,1,Find the Exit to venom crypts (near waypoint),"do NOT go through, only take the checkpoint and waypoint.",
+,,Find and kill the mighty silverfist,,2 skill points
+,,Find the exit to the infested barrens,"do NOT go through, only take the checkpoint",
+,2,Go to the infested barrens,,
+Infested Barrens #1,1,Find the exit to chimeral wetlands,"enter zone, take waypoint, backtrack to Infested Barrens",
+,,Find the exit to azak bog,"enter zone, take waypoint, backtrack to Infested Barrens",
+,,Find the Exit to the matlan waterways,here is the waypoint of barrens itself,
+,2,"From whatever you find last, take the waypoint and portal back to Jungle Ruins",,
+Jungle Ruins #2,,Enter the Venom Crypts,,
+Venom Crypts,1,"Find the corpse for the venom phial, then go back to town",,
+Town #2,1,"go back to town, turn in phial at Servi for a reward",Reward is permanent and cannot be changed later,
+,2,Go to the Azak Bog,,
+The Azak Bog,Opt,"find the Flameskin ritual and activate all, it gives 25% fire res and rarity for the rest of the zone","if you don't find it before the boss, don't search for it, but don't skip it if you do find it before the boss",
+,1,Find and kill Ignagduk,,30 spirit
+,2,Go back to town and then to Chimeral Wetlands,,
+The Chimeral Wetlands,1,Find the temple/trial of chaos,"enter zone, take waypoint, waypoint back to Wetlands. Do the trial at any point from now on",
+,,Find and kill the chimeara boss,found by following the lefthand border of the zone,
+,2,Enter Juquani's Machinarium,Behind the chimera boss,
+Jiquani's Machinarium,1,"Find the first small soul core, then open the door",either left or right of alva,
+,2,Find two more small soul cores,"There are three in total, but only two are needed. The third door is only some gold and a chest.",
+,,Find the exit towards Jiquani's sanctum,,
+,,Find and kill Blackjaw,,10% fire res
+,3,"Checkpoint port to the exit, then go to Jiquani's Sanctum",,
+Jiquani's Sanctum,1,Don't forget the activate the waypoint right after the entry.,,
+,2,Talk to alva,,
+,3,Find two medium soul cores,Soul cores are completely random in the zone.,
+,,Activate both generators,Generators are always to the left and the right back (relativ to where Alva is standing),
+,4,Checkpoint back to Alva,still need to wait until the second soul core arrived at alva (red lines on the ground),
+,5,"Kill Zicoatl, Warden of the core and loot the large soul core",,
+,6,Go back to the infested barrens waypoint,,
+Infested Barrens #2,,Insert the large soul core and go to matlan waterways afterwards,,
+Matlan Waterways,1,"Activate every single lever to navigate through the zone, then activate the big one at the end",,
+,2,Port back to town,,
+Town #3,1,Go down the stairs near the well / the hooded one,,
+,2,"Talk to alva, enter the drowned city",,
+The Drowned City,1,Find the exit to the molten vault,"it is almost always to the north west of the zone
+enter zone, take waypoint, backtrack to the drowned city. Only needed on first character per league",
+,,Find the exit to the apex of filth,"it is almost always to the north east of the zone.
+enter zone, take waypoint, backtrack to the drowned city. Backtracking only needed on first character per league",
+,2,Enter the Molten Vault,only needed on first character per league,
+,3,Enter the Apex of Filth,,
+The Molten Vault,1,"Find and kill the boss, then talk to Oswald back in town",Only needed on first character per league,"unlocks the 
+reforging bench"
+,2,Enter the Apex of Filth,,
+The Apex of Filth,,"Find and kill the queen of filth, then portal back to town","The zone layout is always a huge spiral, either clockwise or counterclockwise. 
+After you travelled a full 360° of that spiral, you will find the boss",
+Town #4,,"Go down the stairs near the well / the hooded one again, and enter the Temple of Kopec",opposite of the drowned city,
+The Temple of Kopec,,"go up the stairs twice, then Kill Ketzuli, High priest of the Sun",The stairs are always in either of the corners of the triangle shaped zone. Stay in the shade to not take damage,
+Intermediate / Town #5,,Talk to Alva and ride the elevator up,,
+,,"Go through the gateway, then down the stairs again to enter Utzaal",,
+Utzaal,Opt,The sacrificial heart can randomly drop in this zone,"If you don't find it in Utzaal, just go to the next zone, do not farm in this zone until it drops",
+,1,Search and kill Viper Napuatzi.,"She is always towards the right end of the zone, facing north.",
+,2,Find the exit to Aggorat and enter aggorat,"It is again always to the top right end of the zone, facing north",
+Aggorat,1,"Follow the voices of the trial of Atziri (on the big plaza), go through to find the next checkpoint","Yes, that means having sound on is beneficial in this zone!",
+,2,Find the exit towards the Black Chambers,"After the big plaza, it is always to the top left end of the zone",
+,,Find the Sacrificial table,"After the big plaza, it is always to the the top right end of the zone",
+,3,The sacrificial heart can randomly drop in this zone,"If you haven't found it until now, continue to kill monsters until you find it.",
+,4,"checkpoint port to the sacrificial table, loot the dagger, place the heart, stab the heart",,2 skill points
+,5,"checkpoint port to the black chambers, enter the black chambers",,
+The Black Chambers,,"Find and defeat Doryiani, Royal Thaumaturge","He is always to the top left or top right of the zone, depending on which angle the entry to the zone is",
+Intermediate / Town #6,,"Go through the Portal to the encampment, speak with doryani, after the cataclysm speak with him again, then speak with the Sin and eventually Alva to get to Act 4 (Kingsmarch)",,
