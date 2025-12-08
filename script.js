@@ -73,10 +73,10 @@ function applyPreferencesToUI() {
     const optionalBtn = document.getElementById('optionalBtn');
     if (optionalBtn) {
         if (showOptional) {
-            optionalBtn.classList.remove('active');
+            optionalBtn.classList.add('active');
             optionalBtn.innerHTML = '<span class="btn-icon">👁</span> Hide Optional';
         } else {
-            optionalBtn.classList.add('active');
+            optionalBtn.classList.remove('active');
             optionalBtn.innerHTML = '<span class="btn-icon">👁</span> Show Optional';
         }
     }
@@ -1538,10 +1538,10 @@ function toggleOptionalContent() {
 
     if (optionalBtn) {
         if (showOptional) {
-            optionalBtn.classList.remove('active');
+            optionalBtn.classList.add('active');
             optionalBtn.innerHTML = '<span class="btn-icon">👁</span> Hide Optional';
         } else {
-            optionalBtn.classList.add('active');
+            optionalBtn.classList.remove('active');
             optionalBtn.innerHTML = '<span class="btn-icon">👁</span> Show Optional';
         }
     }
