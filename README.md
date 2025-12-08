@@ -2,6 +2,14 @@
 
 An interactive web-based guide for tracking your progress through Path of Exile 2's campaign zones. View zone layouts, boss information, suggested routes, step-by-step walkthroughs, and mark zones as completed as you progress through the game.
 
+## 🌐 Live Demo
+
+👉 **Use it now:** https://nicolasbagatello.github.io/poe2-helper/
+
+**No installation required!** Just click the link above to start using the guide directly in your browser. All your progress is saved automatically in your browser's local storage.
+
+---
+
 ## Features
 
 ### Core Functionality
@@ -104,10 +112,15 @@ An interactive web-based guide for tracking your progress through Path of Exile 
 
 ## Local Development
 
+> **Note:** This section is for developers and power users who want to run the guide locally. Most users should just use the [live demo](https://nicolasbagatello.github.io/poe2-helper/) instead.
+
 ### Prerequisites
 
 - A modern web browser (Chrome, Firefox, Safari, Edge)
-- A local web server (optional but recommended)
+- A local web server - choose one:
+  - **Python 3**: [Download from python.org](https://www.python.org/downloads/)
+  - **Node.js** (includes npx): [Download from nodejs.org](https://nodejs.org/)
+  - **PHP**: [Download from php.net](https://www.php.net/downloads)
 
 ### Running Locally
 
