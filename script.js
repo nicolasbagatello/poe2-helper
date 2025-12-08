@@ -757,12 +757,16 @@ function createZoneCard(zone, actNumber) {
     // Town visits
     const townVisitsSection = createTownVisitsSection(zone.town_visits);
 
+    // Layout guides (for zones with multiple layouts)
+    const layoutGuidesSection = createLayoutGuidesSection(zone.layout_guides);
+
     // Personal notes section
     const personalNotesSection = createNotesSection(actNumber, zone.zone_name);
 
     // Append all sections
     card.appendChild(header);
     if (imagesSection) card.appendChild(imagesSection);
+    if (layoutGuidesSection) card.appendChild(layoutGuidesSection);
     if (routeSection) card.appendChild(routeSection);
     if (rewardsSection) card.appendChild(rewardsSection);
     if (poiSection) card.appendChild(poiSection);
@@ -1121,6 +1125,48 @@ function createTownVisitsSection(townVisits) {
 
     section.appendChild(title);
     section.appendChild(visitsList);
+
+    return section;
+}
+
+function createLayoutGuidesSection(layoutGuides) {
+    if (!layoutGuides || layoutGuides.length === 0) return null;
+
+    const section = document.createElement('div');
+    section.className = 'zone-section zone-layout-guides';
+
+    const title = document.createElement('h4');
+    title.className = 'zone-section-title';
+    title.textContent = '🗺️ Layout Guides';
+
+    const guidesList = document.createElement('div');
+    guidesList.className = 'layout-guides-list';
+
+    layoutGuides.forEach((guide) => {
+        const guideItem = document.createElement('div');
+        guideItem.className = 'layout-guide-item';
+
+        const layoutBadge = document.createElement('span');
+        layoutBadge.className = 'layout-badge';
+        layoutBadge.textContent = `Layout ${guide.layout}`;
+
+        const guideName = document.createElement('div');
+        guideName.className = 'layout-guide-name';
+        guideName.textContent = guide.name;
+
+        const guideTips = document.createElement('div');
+        guideTips.className = 'layout-guide-tips';
+        guideTips.textContent = guide.tips;
+
+        guideItem.appendChild(layoutBadge);
+        guideItem.appendChild(guideName);
+        guideItem.appendChild(guideTips);
+
+        guidesList.appendChild(guideItem);
+    });
+
+    section.appendChild(title);
+    section.appendChild(guidesList);
 
     return section;
 }

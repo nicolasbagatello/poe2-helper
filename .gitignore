@@ -1,0 +1,83 @@
+# macOS System Files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS Thumbnails
+._*
+
+# macOS Directories
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# macOS Files that might appear in the root of a volume
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# Node modules (if you add npm/node later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Python (if you add Python scripts later)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Logs
+logs
+*.log
+
+# OS or Editor backup files
+*.bak
+*.tmp
+*.temp
+
+# Build outputs (if you add a build process)
+dist/
+build/
+*.min.js
+*.min.css
+
+# Environment files (if you add API keys later)
+.env
+.env.local
+.env.production
+
+# Testing
+coverage/
+.nyc_output/
+
+# Miscellaneous
+*.cache
+Thumbs.db
+Desktop.ini

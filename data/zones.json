@@ -2329,10 +2329,32 @@
           },
           {
             "zone_name": "Abandoned Prison",
-            "layout_image_name": null,
+            "layout_image_name": ["A4-08-abandoned-prison-1.webp", "A4-08-abandoned-prison-2.webp", "A4-08-abandoned-prison-3.webp", "A4-08-abandoned-prison-4.webp"],
             "layout_confidence": "100% Resolved (4 designs)",
             "suggested_route": "Locate the entrance to Solitary Confinement.",
-            "notes": "Kill monsters until Chapel Key drops. Find and open Chapel Door, kill rare and minions (30% increased Mana or Life Recovery from flasks - can be changed later). Find exit to Solitary Confinement.",
+            "notes": "Kill monsters until Chapel Key drops. Find and open Chapel Door, kill rare and minions (30% increased Mana or Life Recovery from flasks - can be changed later). Find exit to Solitary Confinement. TIP: Following ship side wall is best in 3/4 layouts. Always take first Prison Gate.",
+            "layout_guides": [
+              {
+                "layout": 1,
+                "name": "Early Prison Gate - Parallel to Ship - S Exit",
+                "tips": "Hug ship wall. Prison Gate parallel to the ship's direction. Hug south inside wall to south exit."
+              },
+              {
+                "layout": 2,
+                "name": "Early Prison Gate - Early Forgotten Cells - N Exit",
+                "tips": "Hugging the ship wall a tiny bit slower. Early Forgotten Cells. Head through the middle area and hug the north wall to exit."
+              },
+              {
+                "layout": 3,
+                "name": "Early Prison Gate - Perpendicular to Ship - N Exit",
+                "tips": "Hug ship wall. Prison gate is perpendicular to the ship's direction. Hug inside wall through middle area to the north wall to exit. Check for the top faster path to exit."
+              },
+              {
+                "layout": 4,
+                "name": "No Early Prison Gate - Must Pass Chapel/Armoury - N Exit",
+                "tips": "Hug ship wall, you'll run into early chapel/armoury. Run north from entrance to the building. Late parallel prison gate to the ship's direction. Hug inside wall to north exit."
+              }
+            ],
             "points_of_interest": [
               {
                 "name": "Goddess of Justice (Requires Chapel Key)",
